@@ -96,7 +96,7 @@ EventEmitter 支持若干个事件监听器。当事件发射时，注册到这�
 Node.js中大部分的模块，都继承自Event模块。
 与DOM树上事件不同，不存在事件冒泡、逐层捕获等行为。
 EventEmitter 支持若干个事件监听器。当事件发射时，注册到这个事件的事件监听器被依次">
-<meta property="og:updated_time" content="2017-03-17T05:18:03.189Z">
+<meta property="og:updated_time" content="2017-03-17T05:22:03.267Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="node02">
 <meta name="twitter:description" content="Node事件模块介绍events是node.js 最重要的模块，events模块只提供了一个对象events.EventEmitter，EventEmitter 的核心是事件发射与事件监听器。
@@ -344,6 +344,7 @@ emitter.listeners(event)
 emitter.setMaxListeners(n)
 其它...
 </code></pre><p>不存在冒泡，逐层捕获等行为，</p>
+<a id="more"></a>
 <h2 id="其它…"><a href="#其它…" class="headerlink" title="其它…"></a>其它…</h2><pre><code>EventEmitter.defaultMaxListeners
 </code></pre><p>EventEmitter.defaultMaxListeners功能与setMaxListeners类似，<br>给所有EventEmitter设置最大监听<br>setMaxListeners优先级大于defaultMaxListeners</p>
 <pre><code>EventEmitter.listenerCount(emitter, event)
@@ -462,7 +463,7 @@ emitter.setMaxListeners(n)
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">18</span>
+              <span class="site-state-item-count">19</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
@@ -472,7 +473,7 @@ emitter.setMaxListeners(n)
           
             <div class="site-state-item site-state-tags">
               <a href="/tags">
-                <span class="site-state-item-count">12</span>
+                <span class="site-state-item-count">13</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>

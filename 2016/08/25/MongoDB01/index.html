@@ -84,22 +84,22 @@
 
 
 
-<meta name="description" content="MongoDB安装1.下载MongoDB并安装　　下载地址：http://www.mongodb.org/downloads
-  注意：一般都安装在默认路径就OK了，我的安装路径是  C:\Program Files\MongoDB\Server\3.4\bin
-　2.创建数据库和日志存放目录　在C盘 C:\Program Files\MongoDB\Server\3.4  目录下新建“data”">
+<meta name="description" content="MongoDB介绍MongoDB 是一个基于分布式文件存储的数据库。由 C++ 语言编写。旨在为 WEB 应用提供可扩展的高性能数据存储解决方案。MongoDB 是一个介于关系数据库和非关系数据库之间的产品，是非关系数据库当中功能最丰富，最像关系数据库的。
+MongoDB安装1.下载MongoDB并安装　　下载地址：http://www.mongodb.org/downloads
+  注意：一般都">
 <meta property="og:type" content="article">
 <meta property="og:title" content="MongoDB01">
 <meta property="og:url" content="http://yoursite.com/2016/08/25/MongoDB01/index.html">
 <meta property="og:site_name" content="MrCui's Blog">
-<meta property="og:description" content="MongoDB安装1.下载MongoDB并安装　　下载地址：http://www.mongodb.org/downloads
-  注意：一般都安装在默认路径就OK了，我的安装路径是  C:\Program Files\MongoDB\Server\3.4\bin
-　2.创建数据库和日志存放目录　在C盘 C:\Program Files\MongoDB\Server\3.4  目录下新建“data”">
-<meta property="og:updated_time" content="2017-03-17T05:19:28.623Z">
+<meta property="og:description" content="MongoDB介绍MongoDB 是一个基于分布式文件存储的数据库。由 C++ 语言编写。旨在为 WEB 应用提供可扩展的高性能数据存储解决方案。MongoDB 是一个介于关系数据库和非关系数据库之间的产品，是非关系数据库当中功能最丰富，最像关系数据库的。
+MongoDB安装1.下载MongoDB并安装　　下载地址：http://www.mongodb.org/downloads
+  注意：一般都">
+<meta property="og:updated_time" content="2017-03-17T05:24:32.288Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="MongoDB01">
-<meta name="twitter:description" content="MongoDB安装1.下载MongoDB并安装　　下载地址：http://www.mongodb.org/downloads
-  注意：一般都安装在默认路径就OK了，我的安装路径是  C:\Program Files\MongoDB\Server\3.4\bin
-　2.创建数据库和日志存放目录　在C盘 C:\Program Files\MongoDB\Server\3.4  目录下新建“data”">
+<meta name="twitter:description" content="MongoDB介绍MongoDB 是一个基于分布式文件存储的数据库。由 C++ 语言编写。旨在为 WEB 应用提供可扩展的高性能数据存储解决方案。MongoDB 是一个介于关系数据库和非关系数据库之间的产品，是非关系数据库当中功能最丰富，最像关系数据库的。
+MongoDB安装1.下载MongoDB并安装　　下载地址：http://www.mongodb.org/downloads
+  注意：一般都">
 
 
 
@@ -327,8 +327,10 @@
       
 
       
-        <h2 id="MongoDB安装"><a href="#MongoDB安装" class="headerlink" title="MongoDB安装"></a>MongoDB安装</h2><h3 id="1-下载MongoDB并安装"><a href="#1-下载MongoDB并安装" class="headerlink" title="1.下载MongoDB并安装"></a>1.下载MongoDB并安装</h3><p>　　下载地址：<a href="http://www.mongodb.org/downloads" title="MongoDB 安装地址 此处需要翻墙" target="_blank" rel="external">http://www.mongodb.org/downloads</a></p>
+        <h2 id="MongoDB介绍"><a href="#MongoDB介绍" class="headerlink" title="MongoDB介绍"></a>MongoDB介绍</h2><p>MongoDB 是一个基于分布式文件存储的数据库。由 C++ 语言编写。旨在为 WEB 应用提供可扩展的高性能数据存储解决方案。<br>MongoDB 是一个介于关系数据库和非关系数据库之间的产品，是非关系数据库当中功能最丰富，最像关系数据库的。</p>
+<h2 id="MongoDB安装"><a href="#MongoDB安装" class="headerlink" title="MongoDB安装"></a>MongoDB安装</h2><h3 id="1-下载MongoDB并安装"><a href="#1-下载MongoDB并安装" class="headerlink" title="1.下载MongoDB并安装"></a>1.下载MongoDB并安装</h3><p>　　下载地址：<a href="http://www.mongodb.org/downloads" title="MongoDB 安装地址 此处需要翻墙" target="_blank" rel="external">http://www.mongodb.org/downloads</a></p>
 <p>  注意：一般都安装在默认路径就OK了，我的安装路径是  C:\Program Files\MongoDB\Server\3.4\bin</p>
+<a id="more"></a>
 <h3 id="2-创建数据库和日志存放目录"><a href="#2-创建数据库和日志存放目录" class="headerlink" title="　2.创建数据库和日志存放目录"></a>　2.创建数据库和日志存放目录</h3><p>　在C盘 C:\Program Files\MongoDB\Server\3.4  目录下新建“data”和“log”两个文件夹，分别存放数据库文件和日志文件如图</p>
 <h3 id="3-创建一个config文件"><a href="#3-创建一个config文件" class="headerlink" title="3.创建一个config文件"></a>3.创建一个config文件</h3><p>打开目录“C:\Program Files\MongoDB\Server\3.4\bin”，并在此目录下新建一个mongo.config文件，文件内容如下</p>
 <pre><code>##数据库目录
@@ -363,6 +365,8 @@ logpath=C:\M_LOG\mongodb.log  --logappend&quot;
 
 　　mongotop.exe：跟踪MongDB实例读写时间工具
 </code></pre><p>　更多详细解释或操作可以查看：<a href="http://docs.mongodb.org/manual/reference/program/" target="_blank" rel="external">http://docs.mongodb.org/manual/reference/program/</a></p>
+<h2 id="参考地址"><a href="#参考地址" class="headerlink" title="参考地址"></a>参考地址</h2><p>MongoDB 官网地址：<a href="https://www.mongodb.com/" target="_blank" rel="external">https://www.mongodb.com/</a><br>MongoDB 官方英文文档：<a href="https://docs.mongodb.com/manual/" target="_blank" rel="external">https://docs.mongodb.com/manual/</a></p>
+<p>MongoDB 各平台下载地址：<a href="https://www.mongodb.com/download-center#community" target="_blank" rel="external">https://www.mongodb.com/download-center#community</a></p>
 
       
     </div>
@@ -475,7 +479,7 @@ logpath=C:\M_LOG\mongodb.log  --logappend&quot;
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">18</span>
+              <span class="site-state-item-count">19</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
@@ -485,7 +489,7 @@ logpath=C:\M_LOG\mongodb.log  --logappend&quot;
           
             <div class="site-state-item site-state-tags">
               <a href="/tags">
-                <span class="site-state-item-count">12</span>
+                <span class="site-state-item-count">13</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
@@ -567,7 +571,7 @@ logpath=C:\M_LOG\mongodb.log  --logappend&quot;
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#MongoDB安装"><span class="nav-number">1.</span> <span class="nav-text">MongoDB安装</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-下载MongoDB并安装"><span class="nav-number">1.1.</span> <span class="nav-text">1.下载MongoDB并安装</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-创建数据库和日志存放目录"><span class="nav-number">1.2.</span> <span class="nav-text">　2.创建数据库和日志存放目录</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-创建一个config文件"><span class="nav-number">1.3.</span> <span class="nav-text">3.创建一个config文件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-添加环境变量"><span class="nav-number">1.4.</span> <span class="nav-text">4.添加环境变量</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-以Windows服务器运行MongoDB"><span class="nav-number">1.5.</span> <span class="nav-text">5.以Windows服务器运行MongoDB</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#6-测试MongoDB"><span class="nav-number">1.6.</span> <span class="nav-text">6.测试MongoDB</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#7-注册MongoDB为系统服务（此步骤必须以系统管理员身份运行cmd，否则会报错）"><span class="nav-number">1.7.</span> <span class="nav-text">7.注册MongoDB为系统服务（此步骤必须以系统管理员身份运行cmd，否则会报错）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#8-在cmd中输入net-start-MongoDB即可启动MongoDB数据库服务，此时控制台输出Mongo-DB-服务已经启动成功，说明系统启动成功。"><span class="nav-number">1.8.</span> <span class="nav-text">8.在cmd中输入net start MongoDB即可启动MongoDB数据库服务，此时控制台输出Mongo DB 服务已经启动成功，说明系统启动成功。</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#9-如果出现发生系统错误-1067-请把db目录下的mongod-lock文件删除后重新输入net-start-MongoDB启动服务即可。"><span class="nav-number">1.9.</span> <span class="nav-text">9.如果出现发生系统错误 1067 请把db目录下的mongod.lock文件删除后重新输入net start MongoDB启动服务即可。</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#10-如果解决-1067-没有解决，请参考以下链接"><span class="nav-number">1.10.</span> <span class="nav-text">10.如果解决 1067 没有解决，请参考以下链接</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#对于一些-C-Program-Files-MongoDB-Server-3-4-目录-exe程序的说明，"><span class="nav-number">2.</span> <span class="nav-text">对于一些 C:\Program Files\MongoDB\Server\3.4 目录 .exe程序的说明，</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#MongoDB介绍"><span class="nav-number">1.</span> <span class="nav-text">MongoDB介绍</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#MongoDB安装"><span class="nav-number">2.</span> <span class="nav-text">MongoDB安装</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-下载MongoDB并安装"><span class="nav-number">2.1.</span> <span class="nav-text">1.下载MongoDB并安装</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-创建数据库和日志存放目录"><span class="nav-number">2.2.</span> <span class="nav-text">　2.创建数据库和日志存放目录</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-创建一个config文件"><span class="nav-number">2.3.</span> <span class="nav-text">3.创建一个config文件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-添加环境变量"><span class="nav-number">2.4.</span> <span class="nav-text">4.添加环境变量</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-以Windows服务器运行MongoDB"><span class="nav-number">2.5.</span> <span class="nav-text">5.以Windows服务器运行MongoDB</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#6-测试MongoDB"><span class="nav-number">2.6.</span> <span class="nav-text">6.测试MongoDB</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#7-注册MongoDB为系统服务（此步骤必须以系统管理员身份运行cmd，否则会报错）"><span class="nav-number">2.7.</span> <span class="nav-text">7.注册MongoDB为系统服务（此步骤必须以系统管理员身份运行cmd，否则会报错）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#8-在cmd中输入net-start-MongoDB即可启动MongoDB数据库服务，此时控制台输出Mongo-DB-服务已经启动成功，说明系统启动成功。"><span class="nav-number">2.8.</span> <span class="nav-text">8.在cmd中输入net start MongoDB即可启动MongoDB数据库服务，此时控制台输出Mongo DB 服务已经启动成功，说明系统启动成功。</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#9-如果出现发生系统错误-1067-请把db目录下的mongod-lock文件删除后重新输入net-start-MongoDB启动服务即可。"><span class="nav-number">2.9.</span> <span class="nav-text">9.如果出现发生系统错误 1067 请把db目录下的mongod.lock文件删除后重新输入net start MongoDB启动服务即可。</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#10-如果解决-1067-没有解决，请参考以下链接"><span class="nav-number">2.10.</span> <span class="nav-text">10.如果解决 1067 没有解决，请参考以下链接</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#对于一些-C-Program-Files-MongoDB-Server-3-4-目录-exe程序的说明，"><span class="nav-number">3.</span> <span class="nav-text">对于一些 C:\Program Files\MongoDB\Server\3.4 目录 .exe程序的说明，</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#参考地址"><span class="nav-number">4.</span> <span class="nav-text">参考地址</span></a></li></ol></div>
             
 
           </div>
