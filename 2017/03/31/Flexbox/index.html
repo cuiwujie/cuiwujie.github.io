@@ -1,0 +1,731 @@
+<!DOCTYPE html>
+<html lang=zh>
+<head>
+    <meta charset="utf-8">
+    
+    <title>Flexbox | MrCui&#39;s Blog</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <meta name="description" content="Flexbox 属性详解注释：本文的图来自
+ http://www.css88.com/archives/7212
+http://www.w3cplus.com/css3/a-guide-to-flexbox.html
+简介:English:In the flex layout model, the children of a flex container can be laid out in a">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Flexbox">
+<meta property="og:url" content="http://yoursite.com/2017/03/31/Flexbox/index.html">
+<meta property="og:site_name" content="MrCui's Blog">
+<meta property="og:description" content="Flexbox 属性详解注释：本文的图来自
+ http://www.css88.com/archives/7212
+http://www.w3cplus.com/css3/a-guide-to-flexbox.html
+简介:English:In the flex layout model, the children of a flex container can be laid out in a">
+<meta property="og:image" content="http://onnq25vz1.bkt.clouddn.com/2716002657-56fde33ed34c2_articlex.png">
+<meta property="og:image" content="http://onnq25vz1.bkt.clouddn.com/2886917468-56fde3412376f_articlex.png">
+<meta property="og:image" content="http://onnq25vz1.bkt.clouddn.com/1140460893-56fde34372ee9_articlex.png">
+<meta property="og:image" content="http://onnq25vz1.bkt.clouddn.com/1-L2W-ziqU45a1BNWV79ijDQ.gif">
+<meta property="og:image" content="http://onnq25vz1.bkt.clouddn.com/2142640250-56fde345574b6_articlex.png">
+<meta property="og:image" content="http://onnq25vz1.bkt.clouddn.com/1-PBr_ncouIehALaEOWmSbpQ.gif">
+<meta property="og:image" content="http://onnq25vz1.bkt.clouddn.com/1-4yKnG2-vuPF5XA-BmXADLQ.gif">
+<meta property="og:image" content="http://onnq25vz1.bkt.clouddn.com/4212753174-56fde6083157c_articlex.png">
+<meta property="og:image" content="http://onnq25vz1.bkt.clouddn.com/1-2-6Tw8jqWrMKOfIugKyuDA.gif">
+<meta property="og:image" content="http://onnq25vz1.bkt.clouddn.com/3901200768-56fde5fc56a1c_articlex.png">
+<meta property="og:image" content="http://onnq25vz1.bkt.clouddn.com/1-htfdNmRIIFu_veRaFOj5qA.gif">
+<meta property="og:image" content="http://onnq25vz1.bkt.clouddn.com/1-6dd9KnKMUN49lFsbHlJi6A.png">
+<meta property="og:image" content="http://onnq25vz1.bkt.clouddn.com/1-6mq-Uay7t6NhdF2E41Do0g.gif">
+<meta property="og:image" content="http://onnq25vz1.bkt.clouddn.com/20150616152600533.png">
+<meta property="og:image" content="http://onnq25vz1.bkt.clouddn.com/616798064-56fde606e2482_articlex.png">
+<meta property="og:image" content="http://onnq25vz1.bkt.clouddn.com/1-HIADl1oL6pxXb2dMh_pXSQ.gif">
+<meta property="og:image" content="http://onnq25vz1.bkt.clouddn.com/1-dON3-0RooiPyfDr0DBEOmA.png">
+<meta property="og:image" content="http://onnq25vz1.bkt.clouddn.com/1-cK-yB4z_L6bmEqoG5qDoRA.png">
+<meta property="og:image" content="http://onnq25vz1.bkt.clouddn.com/5-7p2fLcy13xFU9GjtM4cbHEw.png">
+<meta property="og:image" content="http://onnq25vz1.bkt.clouddn.com/1-gHyLHG52cySgLmy0x-edZA.gif">
+<meta property="og:image" content="http://onnq25vz1.bkt.clouddn.com/1-JnjR4ULs8de0so1bdUPogw.png">
+<meta property="og:image" content="http://onnq25vz1.bkt.clouddn.com/1-FVO9kX3wwqakhcT9JWS2Ww.gif">
+<meta property="og:image" content="http://onnq25vz1.bkt.clouddn.com/1-GrLzJ4jH3v2Z5Va_TMOXkQ.gif">
+<meta property="og:image" content="http://onnq25vz1.bkt.clouddn.com/1-JnjR4ULs8de0so1bdUPogw.png">
+<meta property="og:image" content="http://onnq25vz1.bkt.clouddn.com/2111470050-56fde6078aa8c_articlex.png">
+<meta property="og:image" content="http://onnq25vz1.bkt.clouddn.com/1-S3LKFr_BICUtAWA5LOFxVw.gif">
+<meta property="og:image" content="http://onnq25vz1.bkt.clouddn.com/1-W4QU1Fw9kDLEH2m-J9VGyw.gif">
+<meta property="og:image" content="http://onnq25vz1.bkt.clouddn.com/1-BKZt7AT5eFee4KRhe82gew.gif">
+<meta property="og:image" content="http://onnq25vz1.bkt.clouddn.com/1-70-KTWYpA2LnLjqi0xDrJA.gif">
+<meta property="og:image" content="http://onnq25vz1.bkt.clouddn.com/1-W4QU1Fw9kDLEH2m-J9VGyw.gif">
+<meta property="og:updated_time" content="2017-04-05T02:15:43.641Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Flexbox">
+<meta name="twitter:description" content="Flexbox 属性详解注释：本文的图来自
+ http://www.css88.com/archives/7212
+http://www.w3cplus.com/css3/a-guide-to-flexbox.html
+简介:English:In the flex layout model, the children of a flex container can be laid out in a">
+<meta name="twitter:image" content="http://onnq25vz1.bkt.clouddn.com/2716002657-56fde33ed34c2_articlex.png">
+    
+
+    
+
+    
+        <link rel="icon" href="/favicon.ico" />
+    
+
+    <link rel="stylesheet" href="/libs/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/libs/open-sans/styles.css">
+    <link rel="stylesheet" href="/libs/source-code-pro/styles.css">
+
+    <link rel="stylesheet" href="/css/style.css">
+
+    <script src="/libs/jquery/2.1.3/jquery.min.js"></script>
+    
+    
+        <link rel="stylesheet" href="/libs/lightgallery/css/lightgallery.min.css">
+    
+    
+        <link rel="stylesheet" href="/libs/justified-gallery/justifiedGallery.min.css">
+    
+    
+    
+    
+
+
+</head>
+
+<body>
+    <div id="container">
+        <header id="header">
+    <div id="header-main" class="header-inner">
+        <div class="outer">
+            <a href="/" id="logo">
+                <i class="logo"></i>
+                <span class="site-title">MrCui&#39;s Blog</span>
+            </a>
+            <nav id="main-nav">
+                
+                    <a class="main-nav-link" href="/.">Home</a>
+                
+                    <a class="main-nav-link" href="/archives">Archives</a>
+                
+                    <a class="main-nav-link" href="http://cuiwujie.duapp.com/">About</a>
+                
+            </nav>
+            
+                
+                <nav id="sub-nav">
+                    <div class="profile" id="profile-nav">
+                        <a id="profile-anchor" href="javascript:;">
+                            <img class="avatar" src="https://www.gravatar.com/avatar/0ed1d5a3dff1310ed49e8e9d3134dcbb" />
+                            <i class="fa fa-caret-down"></i>
+                        </a>
+                    </div>
+                </nav>
+            
+            <div id="search-form-wrap">
+
+    <form class="search-form">
+        <input type="text" class="ins-search-input search-form-input" placeholder="Rechercher" />
+        <button type="submit" class="search-form-submit"></button>
+    </form>
+    <div class="ins-search">
+    <div class="ins-search-mask"></div>
+    <div class="ins-search-container">
+        <div class="ins-input-wrapper">
+            <input type="text" class="ins-search-input" placeholder="Type something..." />
+            <span class="ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
+        </div>
+        <div class="ins-section-wrapper">
+            <div class="ins-section-container"></div>
+        </div>
+    </div>
+</div>
+<script>
+(function (window) {
+    var INSIGHT_CONFIG = {
+        TRANSLATION: {
+            POSTS: 'Articles',
+            PAGES: 'Pages',
+            CATEGORIES: 'Catégories',
+            TAGS: 'Tags',
+            UNTITLED: '(Untitled)',
+        },
+        ROOT_URL: '/',
+        CONTENT_URL: '/content.json',
+    };
+    window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+})(window);
+</script>
+<script src="/js/insight.js"></script>
+
+</div>
+        </div>
+    </div>
+    <div id="main-nav-mobile" class="header-sub header-inner">
+        <table class="menu outer">
+            <tr>
+                
+                    <td><a class="main-nav-link" href="/.">Home</a></td>
+                
+                    <td><a class="main-nav-link" href="/archives">Archives</a></td>
+                
+                    <td><a class="main-nav-link" href="http://cuiwujie.duapp.com/">About</a></td>
+                
+                <td>
+                    
+    <div class="search-form">
+        <input type="text" class="ins-search-input search-form-input" placeholder="Rechercher" />
+    </div>
+
+                </td>
+            </tr>
+        </table>
+    </div>
+</header>
+
+        <div class="outer">
+            
+                
+
+<aside id="profile">
+    <div class="inner profile-inner">
+        <div class="base-info profile-block">
+            <img id="avatar" src="https://www.gravatar.com/avatar/0ed1d5a3dff1310ed49e8e9d3134dcbb?s=128" />
+            <h2 id="name">cuiwujie</h2>
+            <h3 id="title">The front-end engineer</h3>
+            <span id="location"><i class="fa fa-map-marker"></i>Qinhuangdao, China</span>
+            <a id="follow" target="_blank" href="https://github.com/cwjie0229/">SUIVRE</a>
+        </div>
+        <div class="article-info profile-block">
+            <div class="article-info-block">
+                20
+                <span>Articles</span>
+            </div>
+            <div class="article-info-block">
+                14
+                <span>Tags</span>
+            </div>
+        </div>
+        
+        <div class="profile-block social-links">
+            <table>
+                <tr>
+                    
+                    
+                    <td>
+                        <a href="https://github.com/cwjie0229/" target="_blank" title="github" class=tooltip>
+                            <i class="fa fa-github"></i>
+                        </a>
+                    </td>
+                    
+                    <td>
+                        <a href="https://twitter.com/cwujie/" target="_blank" title="Twitter" class=tooltip>
+                            <i class="fa fa-Twitter"></i>
+                        </a>
+                    </td>
+                    
+                    <td>
+                        <a href="https://segmentfault.com/u/mulanchenghu_58cf323b8093f" target="_blank" title="stack-overflow" class=tooltip>
+                            <i class="fa fa-stack-overflow"></i>
+                        </a>
+                    </td>
+                    
+                    <td>
+                        <a href="http://weibo.com/cwjiewb/" target="_blank" title="weibo" class=tooltip>
+                            <i class="fa fa-weibo"></i>
+                        </a>
+                    </td>
+                    
+                </tr>
+            </table>
+        </div>
+        
+    </div>
+</aside>
+
+            
+            <section id="main"><article id="post-Flexbox" class="article article-type-post" itemscope itemprop="blogPost">
+    <div class="article-inner">
+        
+        
+            <header class="article-header">
+                
+    
+        <h1 class="article-title" itemprop="name">
+            Flexbox
+        </h1>
+    
+
+                
+                    <div class="article-meta">
+                        
+    <div class="article-date">
+        <i class="fa fa-calendar"></i>
+        <a href="/2017/03/31/Flexbox/">
+            <time datetime="2017-03-31T01:36:24.000Z" itemprop="datePublished">2017-03-31</time>
+        </a>
+    </div>
+
+
+                        
+                        
+    <div class="article-tag">
+        <i class="fa fa-tag"></i>
+        <a class="tag-link" href="/tags/Flexbox/">Flexbox</a>
+    </div>
+
+                    </div>
+                
+            </header>
+        
+        
+        <div class="article-entry" itemprop="articleBody">
+        
+            
+            <h1 id="Flexbox-属性详解"><a href="#Flexbox-属性详解" class="headerlink" title="Flexbox 属性详解"></a>Flexbox 属性详解</h1><p>注释：本文的图来自</p>
+<p> <a href="http://www.css88.com/archives/7212" target="_blank" rel="external">http://www.css88.com/archives/7212</a></p>
+<p><a href="http://www.w3cplus.com/css3/a-guide-to-flexbox.html" target="_blank" rel="external">http://www.w3cplus.com/css3/a-guide-to-flexbox.html</a></p>
+<p>简介:<br>English:<br>In the flex layout model, the children of a flex container can be laid out in any direction, and can “flex” their sizes, either growing to fill unused space or shrinking to avoid overflowing the parent. Both horizontal and vertical alignment of the children can be easily manipulated. Nesting of these boxes (horizontal inside vertical, or vertical inside horizontal) can be used to build layouts in two dimensions.(<a href="https://www.w3.org/TR/2015/WD-css-flexbox-1-20150514/" title="W3C" target="_blank" rel="external">https://www.w3.org/TR/2015/WD-css-flexbox-1-20150514/</a>)</p>
+<p>China:     flexbox的出现是为了解决复杂的web布局，因为这种布局方式很灵活。容器的子元素可以任意方向进行排列。此属性目前处于非正式标准，以下是各浏览器对flexbox的支持程度，在较新的浏览器中基本可以使用该属性。</p>
+<a id="more"></a>
+<p><img src="http://onnq25vz1.bkt.clouddn.com/2716002657-56fde33ed34c2_articlex.png" alt="Alt text"></p>
+<h2 id="Flexbox-模型及其术语"><a href="#Flexbox-模型及其术语" class="headerlink" title="Flexbox 模型及其术语"></a>Flexbox 模型及其术语</h2><p>flex布局模型不同于块和内联模型布局，块和内联模型的布局计算依赖于块和内联的流方向，而flex布局依赖于flex directions.简单的说：Flexbox是布局模块，而不是一个简单的属性，它包含父元素(flex container)和子元素(flex items)的属性。</p>
+<p>1.主轴、主轴方向(main axis |main dimension)：用户代理沿着一个伸缩容器的主轴配置伸缩项目，主轴是主轴方向的延伸。</p>
+<p>2.主轴起点、主轴终点(main-start |main-end)：伸缩项目的配置从容器的主轴起点边开始，往主轴终点边结束。</p>
+<p>3.主轴长度、主轴长度属性(main size |main size property)：伸缩项目的在主轴方向的宽度或高度就是项目的主轴长度，伸缩项目的主轴长度属性是width或height属性，由哪一个对着主轴方向决定。</p>
+<p>4.侧轴、侧轴方向(cross axis |cross dimension)：与主轴垂直的轴称作侧轴，是侧轴方向的延伸。</p>
+<p>5.侧轴起点、侧轴终点(cross-start |cross-end)：填满项目的伸缩行的配置从容器的侧轴起点边开始，往侧轴终点边结束。</p>
+<p>6.侧轴长度、侧轴长度属性(cross size |cross size property)：伸缩项目的在侧轴方向的宽度或高度就是项目的侧轴长度，伸缩项目的侧轴长度属性是”width”或”height”属性，由哪一个对着侧轴方向决定。</p>
+<p><img src="http://onnq25vz1.bkt.clouddn.com/2886917468-56fde3412376f_articlex.png" alt="Alt text"></p>
+<h3 id="用例"><a href="#用例" class="headerlink" title="用例"></a>用例</h3><p>水平居中</p>
+<pre><code>//HTML    
+&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;title&gt;center&lt;/title&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;./center.css&quot;&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;div class=&quot;parent&quot;&gt;&lt;div class=&quot;child&quot;&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+
+//css
+
+body{
+padding: 0;
+margin: 0;
+}
+
+.parent {
+  display: flex;
+  height: 300px; /* Or whatever */
+  background-color: black;
+}
+
+.child {
+  width: 100px;  /* Or whatever */
+  height: 100px; /* Or whatever */
+  margin: auto;  /* Magic! */
+  background-color: white;
+}
+</code></pre><p>六个子元素布局</p>
+<pre><code>//HTML
+
+&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;title&gt;six&lt;/title&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;./six.css&quot;&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;ul class=&quot;flex-container&quot;&gt;
+        &lt;li class=&quot;flex-item&quot;&gt;1&lt;/li&gt;
+        &lt;li class=&quot;flex-item&quot;&gt;2&lt;/li&gt;
+        &lt;li class=&quot;flex-item&quot;&gt;3&lt;/li&gt;
+        &lt;li class=&quot;flex-item&quot;&gt;4&lt;/li&gt;
+        &lt;li class=&quot;flex-item&quot;&gt;5&lt;/li&gt;
+        &lt;li class=&quot;flex-item&quot;&gt;6&lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+
+//css
+body{ margin: 0;padding: 0;}
+ul {margin: 0;padding: 0;}
+li{list-style: none;}
+.flex-container {display: flex;flex-flow: row wrap;justify-content: space-around;}
+.flex-item {background: tomato;padding: 5px;width: 200px;height: 150px;margin-top: 10px; line-height: 150px;color: white;font-weight: bold;font-size: 3em;text-align: center;
+}
+</code></pre><p>效果</p>
+<p><img src="http://onnq25vz1.bkt.clouddn.com/1140460893-56fde34372ee9_articlex.png" alt="Alt text"></p>
+<h2 id="属性解释"><a href="#属性解释" class="headerlink" title="属性解释"></a>属性解释</h2><h3 id="1-display（flex-container）"><a href="#1-display（flex-container）" class="headerlink" title="1.display（flex container）"></a>1.display（flex container）</h3><pre><code>display: other values | flex | inline-flex;
+</code></pre><p><img src="http://onnq25vz1.bkt.clouddn.com/1-L2W-ziqU45a1BNWV79ijDQ.gif" alt="Alt text"></p>
+<h3 id="2-flex-direction（flex-container）"><a href="#2-flex-direction（flex-container）" class="headerlink" title="2.flex-direction（flex container）"></a>2.flex-direction（flex container）</h3><p>这个主要用来创建主轴，从而定义了伸缩项目放置在伸缩容器的方向。</p>
+<pre><code>flex-direction: row | row-reverse | column | column-reverse
+</code></pre><blockquote>
+<p>row(默认值)：在“ltr”排版方式下从左向右排列；在“rtl”排版方式下从右向左排列。</p>
+<p>row-reverse：与row排列方向相反，在“ltr”排版方式下从右向左排列；在“rtl”排版方式下从左向右排列.</p>
+<p>column：类似 于row，不过是从上到下排列.</p>
+<p>column-reverse：类似于row-reverse，不过是从下到上排列。</p>
+</blockquote>
+<p><img src="http://onnq25vz1.bkt.clouddn.com/2142640250-56fde345574b6_articlex.png" alt="Alt text"><br><img src="http://onnq25vz1.bkt.clouddn.com/1-PBr_ncouIehALaEOWmSbpQ.gif" alt="Alt text"></p>
+<p><img src="http://onnq25vz1.bkt.clouddn.com/1-4yKnG2-vuPF5XA-BmXADLQ.gif" alt="Alt text"></p>
+<h3 id="3-order（flex-items）-默认情况下，伸缩项目是按照文档流出现先后顺序排列。然而，“order”属性可以控制伸缩项目在他们的伸缩容器出现的顺序。"><a href="#3-order（flex-items）-默认情况下，伸缩项目是按照文档流出现先后顺序排列。然而，“order”属性可以控制伸缩项目在他们的伸缩容器出现的顺序。" class="headerlink" title="3.order（flex items） 默认情况下，伸缩项目是按照文档流出现先后顺序排列。然而，“order”属性可以控制伸缩项目在他们的伸缩容器出现的顺序。"></a>3.order（flex items） 默认情况下，伸缩项目是按照文档流出现先后顺序排列。然而，“order”属性可以控制伸缩项目在他们的伸缩容器出现的顺序。</h3><pre><code>order: &lt;integer&gt; (数字)
+</code></pre><h3 id="4-flex-wrap（flex-container）-这个主要用来定义伸缩容器里是单行还是多行显示，侧轴的方向决定了新行堆放的方向。"><a href="#4-flex-wrap（flex-container）-这个主要用来定义伸缩容器里是单行还是多行显示，侧轴的方向决定了新行堆放的方向。" class="headerlink" title="4.flex-wrap（flex container） 这个主要用来定义伸缩容器里是单行还是多行显示，侧轴的方向决定了新行堆放的方向。"></a>4.flex-wrap（flex container） 这个主要用来定义伸缩容器里是单行还是多行显示，侧轴的方向决定了新行堆放的方向。</h3><pre><code>flex-wrap: nowrap | wrap | wrap-reverse 
+</code></pre><blockquote>
+<p>nowrap(默认值)：伸缩容器单行显示，“ltr”排版下，伸缩项目从左到右排列；“rtl”排版上伸缩项目从右向左排列。</p>
+<p>wrap：伸缩容器多行显示，“ltr”排版下，伸缩项目从左到右排列；“rtl”排版上伸缩项目从右向左排列。</p>
+<p>wrap-reverse：伸缩容器多行显示，“ltr”排版下，伸缩项目从右向左排列；“rtl”排版下，伸缩项目从左到右排列。（和wrap相反）</p>
+</blockquote>
+<h3 id="5-flex-flow（flex-container）-这个是-2-和-4-属性的缩写版本。同时定义了伸缩容器的主轴和侧轴。其默认值为“row-nowrap”。"><a href="#5-flex-flow（flex-container）-这个是-2-和-4-属性的缩写版本。同时定义了伸缩容器的主轴和侧轴。其默认值为“row-nowrap”。" class="headerlink" title="5.flex-flow（flex container） 这个是  2  和 4 属性的缩写版本。同时定义了伸缩容器的主轴和侧轴。其默认值为“row nowrap”。"></a>5.flex-flow（flex container） 这个是  2  和 4 属性的缩写版本。同时定义了伸缩容器的主轴和侧轴。其默认值为“row nowrap”。</h3><pre><code>flex-flow: &lt;‘flex-direction’&gt; || &lt;‘flex-wrap’&gt;
+</code></pre><h3 id="6-justify-content（flex-container）-这个是用来定义伸缩项目沿着主轴线的对齐方式。当一行上的所有伸缩项目都不能伸缩或可伸缩但是已经达到其最大长度时，这一属性才会对多余的空间进行分配。当项目溢出某一行时，这一属性也会在项目的对齐上施加一些控制。"><a href="#6-justify-content（flex-container）-这个是用来定义伸缩项目沿着主轴线的对齐方式。当一行上的所有伸缩项目都不能伸缩或可伸缩但是已经达到其最大长度时，这一属性才会对多余的空间进行分配。当项目溢出某一行时，这一属性也会在项目的对齐上施加一些控制。" class="headerlink" title="6.justify-content（flex container） 这个是用来定义伸缩项目沿着主轴线的对齐方式。当一行上的所有伸缩项目都不能伸缩或可伸缩但是已经达到其最大长度时，这一属性才会对多余的空间进行分配。当项目溢出某一行时，这一属性也会在项目的对齐上施加一些控制。"></a>6.justify-content（flex container） 这个是用来定义伸缩项目沿着主轴线的对齐方式。当一行上的所有伸缩项目都不能伸缩或可伸缩但是已经达到其最大长度时，这一属性才会对多余的空间进行分配。当项目溢出某一行时，这一属性也会在项目的对齐上施加一些控制。</h3><pre><code>justify-content: flex-start | flex-end | center | space-between | space-around;
+</code></pre><blockquote>
+<p>flex-start(默认值)：伸缩项目向一行的起始位置靠齐。</p>
+<p>flex-end：伸缩项目向一行的结束位置靠齐。</p>
+<p>center：伸缩项目向一行的中间位置靠齐。</p>
+<p>space-between：伸缩项目会平均地分布在行里。第一个伸缩项目一行中的最开始位置，最后一个伸缩项目在一行中最终点位置。</p>
+<p>space-around：伸缩项目会平均地分布在行里，两端保留一半的空间。</p>
+</blockquote>
+<p><img src="http://onnq25vz1.bkt.clouddn.com/4212753174-56fde6083157c_articlex.png" alt="Alt text"></p>
+<p><img src="http://onnq25vz1.bkt.clouddn.com/1-2-6Tw8jqWrMKOfIugKyuDA.gif" alt="Alt text"></p>
+<h3 id="7-align-content（flex-container）-这个属性主要用来调准伸缩行在伸缩容器里的对齐方式。类似于伸缩项目在主轴上使用“justify-content”一样。"><a href="#7-align-content（flex-container）-这个属性主要用来调准伸缩行在伸缩容器里的对齐方式。类似于伸缩项目在主轴上使用“justify-content”一样。" class="headerlink" title="7.align-content（flex container） 这个属性主要用来调准伸缩行在伸缩容器里的对齐方式。类似于伸缩项目在主轴上使用“justify-content”一样。"></a>7.align-content（flex container） 这个属性主要用来调准伸缩行在伸缩容器里的对齐方式。类似于伸缩项目在主轴上使用“justify-content”一样。</h3><pre><code>align-content: flex-start | flex-end | center | space-between | space-around | stretch;
+</code></pre><p><img src="http://onnq25vz1.bkt.clouddn.com/3901200768-56fde5fc56a1c_articlex.png" alt="Alt text"></p>
+<p><img src="http://onnq25vz1.bkt.clouddn.com/1-htfdNmRIIFu_veRaFOj5qA.gif" alt="Alt text"><br><img src="http://onnq25vz1.bkt.clouddn.com/1-6dd9KnKMUN49lFsbHlJi6A.png" alt="Alt text"></p>
+<p>为了更好地演示主轴和交叉轴的区别，让我们结合 justify-content和align-items，看看在 flex-direction 两个不同属性值的作用下，轴心有什么不同：</p>
+<p><img src="http://onnq25vz1.bkt.clouddn.com/1-6mq-Uay7t6NhdF2E41Do0g.gif" alt="Alt text"></p>
+<h3 id="8-align-items（flex-container）"><a href="#8-align-items（flex-container）" class="headerlink" title="8.align-items（flex container）"></a>8.align-items（flex container）</h3><pre><code>align-items: flex-start | flex-end | center | baseline | stretch
+</code></pre><blockquote>
+<p>flex-start：伸缩项目在侧轴起点边的外边距紧靠住该行在侧轴起始的边。</p>
+<p>flex-end：伸缩项目在侧轴终点边的外边距靠住该行在侧轴终点的边 。</p>
+<p>center：伸缩项目的外边距盒在该行的侧轴上居中放置。</p>
+<p>baseline：伸缩项目根据他们的基线对齐。</p>
+<p>stretch（默认值）：伸缩项目拉伸填充整个伸缩容器。此值会使项目的外边距盒的尺寸在遵照「min/max-width/height」属性的限制下尽可能接近所在行的尺寸。</p>
+</blockquote>
+<p><img src="http://onnq25vz1.bkt.clouddn.com/20150616152600533.png" alt="Alt text"></p>
+<h3 id="9-align-self（flex-items）-用来在单独的伸缩项目上覆写默认的对齐方式。"><a href="#9-align-self（flex-items）-用来在单独的伸缩项目上覆写默认的对齐方式。" class="headerlink" title="9.align-self（flex items） 用来在单独的伸缩项目上覆写默认的对齐方式。"></a>9.align-self（flex items） 用来在单独的伸缩项目上覆写默认的对齐方式。</h3><pre><code>align-self: auto | flex-start | flex-end | center | baseline | stretch;
+</code></pre><p><img src="http://onnq25vz1.bkt.clouddn.com/616798064-56fde606e2482_articlex.png" alt="Alt text"><br><img src="http://onnq25vz1.bkt.clouddn.com/1-HIADl1oL6pxXb2dMh_pXSQ.gif" alt="Alt text"></p>
+<h3 id="10-flex-grow（flex-items）-根据需要用来定义伸缩项目的扩展能力。它接受一个不带单位的值做为一个比例。主要用来决定伸缩容器剩余空间按比例应扩展多少空间。"><a href="#10-flex-grow（flex-items）-根据需要用来定义伸缩项目的扩展能力。它接受一个不带单位的值做为一个比例。主要用来决定伸缩容器剩余空间按比例应扩展多少空间。" class="headerlink" title="10.flex-grow（flex items） 根据需要用来定义伸缩项目的扩展能力。它接受一个不带单位的值做为一个比例。主要用来决定伸缩容器剩余空间按比例应扩展多少空间。"></a>10.flex-grow（flex items） 根据需要用来定义伸缩项目的扩展能力。它接受一个不带单位的值做为一个比例。主要用来决定伸缩容器剩余空间按比例应扩展多少空间。</h3><pre><code>flex-grow: &lt;number&gt;; /* default 0 */
+</code></pre><p>如果所有伸缩项目的“flex-grow”设置了“1”，那么每个伸缩项目将设置为一个大小相等的剩余空间。如果你给其中一个伸缩项目设置了“flex-grow”值为“2”，那么这个伸缩项目所占的剩余空间是其他伸缩项目所占剩余空间的两倍。</p>
+<p><img src="http://onnq25vz1.bkt.clouddn.com/1-dON3-0RooiPyfDr0DBEOmA.png" alt="Alt text"></p>
+<p><img src="http://onnq25vz1.bkt.clouddn.com/1-cK-yB4z_L6bmEqoG5qDoRA.png" alt="Alt text"><br><img src="http://onnq25vz1.bkt.clouddn.com/5-7p2fLcy13xFU9GjtM4cbHEw.png" alt="Alt text"><br><img src="http://onnq25vz1.bkt.clouddn.com/1-gHyLHG52cySgLmy0x-edZA.gif" alt="Alt text"><br><img src="http://onnq25vz1.bkt.clouddn.com/1-JnjR4ULs8de0so1bdUPogw.png" alt="Alt text"></p>
+<h3 id="11-flex-shrink（flex-items）-根据需要用来定义伸缩项目收缩的能力。-注意：负值同样生效。"><a href="#11-flex-shrink（flex-items）-根据需要用来定义伸缩项目收缩的能力。-注意：负值同样生效。" class="headerlink" title="11.flex-shrink（flex items） 根据需要用来定义伸缩项目收缩的能力。[注意：负值同样生效。]"></a>11.flex-shrink（flex items） 根据需要用来定义伸缩项目收缩的能力。[注意：负值同样生效。]</h3><pre><code>flex-shrink: &lt;number&gt;; /* default 1 */
+</code></pre><p><img src="http://onnq25vz1.bkt.clouddn.com/1-FVO9kX3wwqakhcT9JWS2Ww.gif" alt="Alt text"><br><img src="http://onnq25vz1.bkt.clouddn.com/1-GrLzJ4jH3v2Z5Va_TMOXkQ.gif" alt="Alt text"><br><img src="http://onnq25vz1.bkt.clouddn.com/1-JnjR4ULs8de0so1bdUPogw.png" alt="Alt text"></p>
+<h3 id="12-flex-basis（flex-items）-这个用来设置伸缩基准值，剩余的空间按比率进行伸缩。"><a href="#12-flex-basis（flex-items）-这个用来设置伸缩基准值，剩余的空间按比率进行伸缩。" class="headerlink" title="12.flex-basis（flex items） 这个用来设置伸缩基准值，剩余的空间按比率进行伸缩。"></a>12.flex-basis（flex items） 这个用来设置伸缩基准值，剩余的空间按比率进行伸缩。</h3><pre><code>flex-basis: &lt;length&gt; | auto; /* default auto */
+</code></pre><p>如果设置为“0”，不考虑剩余空白空间。如果设置为自动，则按照flex-grow值分配剩余空白空间。如图所示：</p>
+<p><img src="http://onnq25vz1.bkt.clouddn.com/2111470050-56fde6078aa8c_articlex.png" alt="Alt text"><br><img src="http://onnq25vz1.bkt.clouddn.com/1-S3LKFr_BICUtAWA5LOFxVw.gif" alt="Alt text"><br><img src="http://onnq25vz1.bkt.clouddn.com/1-W4QU1Fw9kDLEH2m-J9VGyw.gif" alt="Alt text"></p>
+<h3 id="13-flex（flex-items）-这是-10-11-和-12-三个属性的缩写。其中第二个和第三个参数（flex-shrink、flex-basis）是可选参数。默认值为“0-1-auto”。"><a href="#13-flex（flex-items）-这是-10-11-和-12-三个属性的缩写。其中第二个和第三个参数（flex-shrink、flex-basis）是可选参数。默认值为“0-1-auto”。" class="headerlink" title="13.flex（flex items） 这是 10 11 和  12 三个属性的缩写。其中第二个和第三个参数（flex-shrink、flex-basis）是可选参数。默认值为“0 1 auto”。"></a>13.flex（flex items） 这是 10 11 和  12 三个属性的缩写。其中第二个和第三个参数（flex-shrink、flex-basis）是可选参数。默认值为“0 1 auto”。</h3><pre><code>flex: none | [ &lt;&apos;flex-grow&apos;&gt; &lt;&apos;flex-shrink&apos;&gt;? || &lt;&apos;flex-basis&apos;&gt; ]
+</code></pre><p><img src="http://onnq25vz1.bkt.clouddn.com/1-BKZt7AT5eFee4KRhe82gew.gif" alt="Alt text"><br><img src="http://onnq25vz1.bkt.clouddn.com/1-70-KTWYpA2LnLjqi0xDrJA.gif" alt="Alt text"><br><img src="http://onnq25vz1.bkt.clouddn.com/1-W4QU1Fw9kDLEH2m-J9VGyw.gif" alt="Alt text"></p>
+
+        
+        </div>
+        <footer class="article-footer">
+            <div class="share-container">
+
+
+
+</div>
+
+    <a data-url="http://yoursite.com/2017/03/31/Flexbox/" data-id="cj14cfmmn00015wnofn3h1xrl" class="article-share-link"><i class="fa fa-share"></i>Partager</a>
+<script>
+    (function ($) {
+        // Prevent duplicate binding
+        if (typeof(__SHARE_BUTTON_BINDED__) === 'undefined' || !__SHARE_BUTTON_BINDED__) {
+            __SHARE_BUTTON_BINDED__ = true;
+        } else {
+            return;
+        }
+        $('body').on('click', function() {
+            $('.article-share-box.on').removeClass('on');
+        }).on('click', '.article-share-link', function(e) {
+            e.stopPropagation();
+
+            var $this = $(this),
+                url = $this.attr('data-url'),
+                encodedUrl = encodeURIComponent(url),
+                id = 'article-share-box-' + $this.attr('data-id'),
+                offset = $this.offset(),
+                box;
+
+            if ($('#' + id).length) {
+                box = $('#' + id);
+
+                if (box.hasClass('on')){
+                    box.removeClass('on');
+                    return;
+                }
+            } else {
+                var html = [
+                    '<div id="' + id + '" class="article-share-box">',
+                        '<input class="article-share-input" value="' + url + '">',
+                        '<div class="article-share-links">',
+                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="fa fa-twitter article-share-twitter" target="_blank" title="Twitter"></a>',
+                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="fa fa-facebook article-share-facebook" target="_blank" title="Facebook"></a>',
+                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="fa fa-pinterest article-share-pinterest" target="_blank" title="Pinterest"></a>',
+                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="fa fa-google article-share-google" target="_blank" title="Google+"></a>',
+                        '</div>',
+                    '</div>'
+                ].join('');
+
+              box = $(html);
+
+              $('body').append(box);
+            }
+
+            $('.article-share-box.on').hide();
+
+            box.css({
+                top: offset.top + 25,
+                left: offset.left
+            }).addClass('on');
+
+        }).on('click', '.article-share-box', function (e) {
+            e.stopPropagation();
+        }).on('click', '.article-share-box-input', function () {
+            $(this).select();
+        }).on('click', '.article-share-box-link', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
+        });
+    })(jQuery);
+</script>
+
+            
+    
+        <a href="http://yoursite.com/2017/03/31/Flexbox/#comments" class="article-comment-link disqus-comment-count" data-disqus-url="http://yoursite.com/2017/03/31/Flexbox/">Commentaires</a>
+    
+
+        </footer>
+    </div>
+    
+        
+<nav id="article-nav">
+    
+    
+        <a href="/2016/10/05/vue01/" id="article-nav-older" class="article-nav-link-wrap">
+            <strong class="article-nav-caption">Plus ancien</strong>
+            <div class="article-nav-title">vue01</div>
+        </a>
+    
+</nav>
+
+
+    
+</article>
+
+
+    
+    <section id="comments">
+    
+        
+    <div id="disqus_thread">
+        <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    </div>
+
+    
+    </section>
+
+</section>
+            
+                <aside id="sidebar">
+   
+        
+    <div class="widget-wrap">
+        <h3 class="widget-title">Récents</h3>
+        <div class="widget">
+            <ul id="recent-post" class="">
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="/2017/03/31/Flexbox/" class="thumbnail">
+    
+    
+        <span class="thumbnail-image thumbnail-none"></span>
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"></p>
+                            <p class="item-title"><a href="/2017/03/31/Flexbox/" class="title">Flexbox</a></p>
+                            <p class="item-date"><time datetime="2017-03-31T01:36:24.000Z" itemprop="datePublished">2017-03-31</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="/2016/10/05/vue01/" class="thumbnail">
+    
+    
+        <span class="thumbnail-image thumbnail-none"></span>
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"></p>
+                            <p class="item-title"><a href="/2016/10/05/vue01/" class="title">vue01</a></p>
+                            <p class="item-date"><time datetime="2016-10-05T12:07:40.000Z" itemprop="datePublished">2016-10-05</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="/2016/08/28/MongoDB02/" class="thumbnail">
+    
+    
+        <span class="thumbnail-image thumbnail-none"></span>
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"></p>
+                            <p class="item-title"><a href="/2016/08/28/MongoDB02/" class="title">MongoDB02</a></p>
+                            <p class="item-date"><time datetime="2016-08-28T05:19:59.000Z" itemprop="datePublished">2016-08-28</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="/2016/08/25/MongoDB01/" class="thumbnail">
+    
+    
+        <span class="thumbnail-image thumbnail-none"></span>
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"></p>
+                            <p class="item-title"><a href="/2016/08/25/MongoDB01/" class="title">MongoDB01</a></p>
+                            <p class="item-date"><time datetime="2016-08-25T05:18:57.000Z" itemprop="datePublished">2016-08-25</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="/2016/08/22/node03/" class="thumbnail">
+    
+    
+        <span class="thumbnail-image thumbnail-none"></span>
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"></p>
+                            <p class="item-title"><a href="/2016/08/22/node03/" class="title">node03</a></p>
+                            <p class="item-date"><time datetime="2016-08-22T05:09:28.000Z" itemprop="datePublished">2016-08-22</time></p>
+                        </div>
+                    </li>
+                
+            </ul>
+        </div>
+    </div>
+
+    
+        
+    
+        
+    <div class="widget-wrap">
+        <h3 class="widget-title">Archives</h3>
+        <div class="widget">
+            <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/03/">March 2017</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/10/">October 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/08/">August 2016</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/07/">July 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/06/">June 2016</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/05/">May 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/04/">April 2016</a><span class="archive-list-count">10</span></li></ul>
+        </div>
+    </div>
+
+    
+        
+    <div class="widget-wrap">
+        <h3 class="widget-title">Tags</h3>
+        <div class="widget">
+            <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Ajax/">Ajax</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/DB/">DB</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Flexbox/">Flexbox</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Functionss/">Functionss</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/JavaScript/">JavaScript</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Javascript/">Javascript</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/javascript/">javascript</a><span class="tag-list-count">5</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/jsBOM/">jsBOM</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/js对象/">js对象</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/node/">node</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/phoneWeb/">phoneWeb</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/vue/">vue</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/webpack/">webpack</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/移动前端/">移动前端</a><span class="tag-list-count">1</span></li></ul>
+        </div>
+    </div>
+
+    
+        
+    <div class="widget-wrap">
+        <h3 class="widget-title">Nuage de tags</h3>
+        <div class="widget tagcloud">
+            <a href="/tags/Ajax/" style="font-size: 10px;">Ajax</a> <a href="/tags/DB/" style="font-size: 13.33px;">DB</a> <a href="/tags/Flexbox/" style="font-size: 10px;">Flexbox</a> <a href="/tags/Functionss/" style="font-size: 10px;">Functionss</a> <a href="/tags/JavaScript/" style="font-size: 10px;">JavaScript</a> <a href="/tags/Javascript/" style="font-size: 10px;">Javascript</a> <a href="/tags/javascript/" style="font-size: 20px;">javascript</a> <a href="/tags/jsBOM/" style="font-size: 10px;">jsBOM</a> <a href="/tags/js对象/" style="font-size: 10px;">js对象</a> <a href="/tags/node/" style="font-size: 16.67px;">node</a> <a href="/tags/phoneWeb/" style="font-size: 10px;">phoneWeb</a> <a href="/tags/vue/" style="font-size: 10px;">vue</a> <a href="/tags/webpack/" style="font-size: 10px;">webpack</a> <a href="/tags/移动前端/" style="font-size: 10px;">移动前端</a>
+        </div>
+    </div>
+
+    
+        
+    <div class="widget-wrap widget-list">
+        <h3 class="widget-title">Liens</h3>
+        <div class="widget">
+            <ul>
+                
+                    <li>
+                        <a href="http://hexo.io">Hexo</a>
+                    </li>
+                
+            </ul>
+        </div>
+    </div>
+
+
+    
+    <div id="toTop" class="fa fa-angle-up"></div>
+</aside>
+            
+        </div>
+        <footer id="footer">
+    <div class="outer">
+        <div id="footer-info" class="inner">
+            &copy; 2017 cui wujie<br>
+            Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>. Theme by <a href="http://github.com/ppoffice">PPOffice</a>
+        </div>
+    </div>
+</footer>
+        
+    
+    <script>
+    var disqus_config = function () {
+        
+            this.page.url = 'http://yoursite.com/2017/03/31/Flexbox/';
+        
+        this.page.identifier = 'Flexbox';
+    };
+    (function() { 
+        var d = document, s = d.createElement('script');  
+        s.src = '//' + 'hexo-theme-icarus' + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+
+
+
+    
+        <script src="/libs/lightgallery/js/lightgallery.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-thumbnail.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-pager.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-autoplay.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-fullscreen.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-zoom.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-hash.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-share.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-video.min.js"></script>
+    
+    
+        <script src="/libs/justified-gallery/jquery.justifiedGallery.min.js"></script>
+    
+
+
+
+<!-- Custom Scripts -->
+<script src="/js/main.js"></script>
+
+    </div>
+</body>
+</html>
