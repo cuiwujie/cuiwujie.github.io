@@ -72,7 +72,7 @@
             <div id="search-form-wrap">
 
     <form class="search-form">
-        <input type="text" class="ins-search-input search-form-input" placeholder="Rechercher" />
+        <input type="text" class="ins-search-input search-form-input" placeholder="Search" />
         <button type="submit" class="search-form-submit"></button>
     </form>
     <div class="ins-search">
@@ -91,9 +91,9 @@
 (function (window) {
     var INSIGHT_CONFIG = {
         TRANSLATION: {
-            POSTS: 'Articles',
+            POSTS: 'Posts',
             PAGES: 'Pages',
-            CATEGORIES: 'Catégories',
+            CATEGORIES: 'Categories',
             TAGS: 'Tags',
             UNTITLED: '(Untitled)',
         },
@@ -121,7 +121,7 @@
                 <td>
                     
     <div class="search-form">
-        <input type="text" class="ins-search-input search-form-input" placeholder="Rechercher" />
+        <input type="text" class="ins-search-input search-form-input" placeholder="Search" />
     </div>
 
                 </td>
@@ -141,16 +141,16 @@
             <h2 id="name">cuiwujie</h2>
             <h3 id="title">The front-end engineer</h3>
             <span id="location"><i class="fa fa-map-marker"></i>Qinhuangdao, China</span>
-            <a id="follow" target="_blank" href="https://github.com/cwjie0229/">SUIVRE</a>
+            <a id="follow" target="_blank" href="https://github.com/cwjie0229/">FOLLOW</a>
         </div>
         <div class="article-info profile-block">
             <div class="article-info-block">
-                20
-                <span>Articles</span>
+                21
+                <span>posts</span>
             </div>
             <div class="article-info-block">
-                14
-                <span>Tags</span>
+                15
+                <span>tags</span>
             </div>
         </div>
         
@@ -192,7 +192,7 @@
 
             
             <section id="main">
-    <article id="post-Flexbox" class="article article-type-post" itemscope itemprop="blogPost">
+    <article id="post-THe-font-Size" class="article article-type-post" itemscope itemprop="blogPost">
     <div class="article-inner">
         
         
@@ -200,7 +200,7 @@
                 
     
         <h1 itemprop="name">
-            <a class="article-title" href="/2017/03/31/Flexbox/">Flexbox</a>
+            <a class="article-title" href="/2017/04/14/THe-font-Size/">THe_font-Size</a>
         </h1>
     
 
@@ -209,8 +209,8 @@
                         
     <div class="article-date">
         <i class="fa fa-calendar"></i>
-        <a href="/2017/03/31/Flexbox/">
-            <time datetime="2017-03-31T01:36:24.000Z" itemprop="datePublished">2017-03-31</time>
+        <a href="/2017/04/14/THe-font-Size/">
+            <time datetime="2017-04-14T08:58:23.000Z" itemprop="datePublished">2017-04-14</time>
         </a>
     </div>
 
@@ -219,7 +219,7 @@
                         
     <div class="article-tag">
         <i class="fa fa-tag"></i>
-        <a class="tag-link" href="/tags/Flexbox/">Flexbox</a>
+        <a class="tag-link" href="/tags/font-Size/">font-Size</a>
     </div>
 
                     </div>
@@ -229,14 +229,33 @@
         
         <div class="article-entry" itemprop="articleBody">
         
-            <p><h1 id="Flexbox-属性详解"><a href="#Flexbox-属性详解" class="headerlink" title="Flexbox 属性详解"></a>Flexbox 属性详解</h1><p>注释：本文的图来自</p>
-<p> <a href="http://www.css88.com/archives/7212">http://www.css88.com/archives/7212</a></p>
-<p><a href="http://www.w3cplus.com/css3/a-guide-to-flexbox.html">http://www.w3cplus.com/css3/a-guide-to-flexbox.html</a></p>
-<p>简介:<br>English:<br>In the flex layout model, the children of a flex container can be laid out in any direction, and can “flex” their sizes, either growing to fill unused space or shrinking to avoid overflowing the parent. Both horizontal and vertical alignment of the children can be easily manipulated. Nesting of these boxes (horizontal inside vertical, or vertical inside horizontal) can be used to build layouts in two dimensions.(<a href="https://www.w3.org/TR/2015/WD-css-flexbox-1-20150514/" title="W3C">https://www.w3.org/TR/2015/WD-css-flexbox-1-20150514/</a>)</p>
-<p>China:     flexbox的出现是为了解决复杂的web布局，因为这种布局方式很灵活。容器的子元素可以任意方向进行排列。此属性目前处于非正式标准，以下是各浏览器对flexbox的支持程度，在较新的浏览器中基本可以使用该属性。</p></p>
-            <p class="article-more-link">
-                <a href="/2017/03/31/Flexbox/#more">Read More</a>
-            </p>
+            
+            <h1 id="web端的字体单位大小设置"><a href="#web端的字体单位大小设置" class="headerlink" title="web端的字体单位大小设置"></a>web端的字体单位大小设置</h1><h2 id="PX为单位"><a href="#PX为单位" class="headerlink" title="PX为单位"></a>PX为单位</h2><p>在Web页面初期制作中，我们都是使用“px”来设置我们的文本，因为他比较稳定和精确。但是这种方法存在一个问题，当用户在浏览器中浏览我们制作的Web页面时，他改变了浏览器的字体大小，这时会使用我们的Web页面布局被打破。这样对于那些关心自己网站可用性的用户来说，就是一个大问题了。因此，这时就提出了使用“em”来定义Web页面的字体。</p>
+<h2 id="em为单位"><a href="#em为单位" class="headerlink" title="em为单位"></a>em为单位</h2><p>一般都是以<body>的“font-size”为基准。比如说我们使用“1em”等于“10px”来改变默认值“1em=16px”，这样一来，我们设置字体大小相当于“14px”时，只需要将其值设置为“1.4em”。</body></p>
+<pre><code>body {
+    font-size: 62.5%;/*10 ÷ 16 × 100% = 62.5%*/
+}
+h1 {
+    font-size: 2.4em; /*2.4em × 10 = 24px */
+}
+p    {
+    font-size: 1.4em; /*1.4em × 10 = 14px */
+}
+li {
+    font-size: 1.4em; /*1.4 × ? = 14px ? */
+}
+</code></pre><p>在使用“em”作单位时，一定需要知道其父元素的设置，因为“em”就是一个相对值，而且是一个相对于父元素的值，其真正的计算公式是：</p>
+<pre><code>1 ÷ 父元素的font-size × 需要转换的像素值 = em
+</code></pre><h2 id="Rem为单位"><a href="#Rem为单位" class="headerlink" title="Rem为单位"></a>Rem为单位</h2><p>W3C官网上描述:”font size of the root element” </p>
+<p>“em”是相对于其父元素来设置字体大小的，这样就会存在一个问题，进行任何元素设置，都要知道它父元素的大小。所以在使用的时候就会出现不可预知的问题。</p>
+<p>“Rem”是相对于<html>的，这样就意味着只需要在根元素下设置一个参考值就OK了。参考如下图：</html></p>
+<p><img src="http://onnq25vz1.bkt.clouddn.com/emTable.png" alt=""></p>
+<p>案例：</p>
+<pre><code>html {font-size: 62.5%;/*10 ÷ 16 × 100% = 62.5%*/}
+body {font-size: 1.4rem;/*1.4 × 10px = 14px */}
+h1 { font-size: 2.4rem;/*2.4 × 10px = 24px*/}
+</code></pre><h2 id="浏览器的兼容性"><a href="#浏览器的兼容性" class="headerlink" title="浏览器的兼容性"></a>浏览器的兼容性</h2><p>rem是CSS3新引进来的一个度量单位，支持的浏览器：Mozilla Firefox 3.6+、Apple Safari 5+、Google Chrome、IE9+和Opera11+。只是IE6-8无法支持，如果想兼容IE下的效果，可你可考虑“px”和“rem”一起使用，用”px”来实现IE6-8下的效果，然后使用“Rem”来实现代浏览器的效果</p>
+
         
         </div>
         <footer class="article-footer">
@@ -246,7 +265,7 @@
 
 </div>
 
-    <a data-url="http://yoursite.com/2017/03/31/Flexbox/" data-id="cj14cfmmn00015wnofn3h1xrl" class="article-share-link"><i class="fa fa-share"></i>Partager</a>
+    <a data-url="http://yoursite.com/2017/04/14/THe-font-Size/" data-id="cj1hlt1c900028cnokayjtioy" class="article-share-link"><i class="fa fa-share"></i>Share</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -314,7 +333,139 @@
 
             
     
-        <a href="http://yoursite.com/2017/03/31/Flexbox/#comments" class="article-comment-link disqus-comment-count" data-disqus-url="http://yoursite.com/2017/03/31/Flexbox/">Commentaires</a>
+        <a href="http://yoursite.com/2017/04/14/THe-font-Size/#comments" class="article-comment-link disqus-comment-count" data-disqus-url="http://yoursite.com/2017/04/14/THe-font-Size/">Comments</a>
+    
+
+        </footer>
+    </div>
+    
+</article>
+
+
+
+    <article id="post-Flexbox" class="article article-type-post" itemscope itemprop="blogPost">
+    <div class="article-inner">
+        
+        
+            <header class="article-header">
+                
+    
+        <h1 itemprop="name">
+            <a class="article-title" href="/2017/03/31/Flexbox/">Flexbox</a>
+        </h1>
+    
+
+                
+                    <div class="article-meta">
+                        
+    <div class="article-date">
+        <i class="fa fa-calendar"></i>
+        <a href="/2017/03/31/Flexbox/">
+            <time datetime="2017-03-31T01:36:24.000Z" itemprop="datePublished">2017-03-31</time>
+        </a>
+    </div>
+
+
+                        
+                        
+    <div class="article-tag">
+        <i class="fa fa-tag"></i>
+        <a class="tag-link" href="/tags/Flexbox/">Flexbox</a>
+    </div>
+
+                    </div>
+                
+            </header>
+        
+        
+        <div class="article-entry" itemprop="articleBody">
+        
+            <p><h1 id="Flexbox-属性详解"><a href="#Flexbox-属性详解" class="headerlink" title="Flexbox 属性详解"></a>Flexbox 属性详解</h1><p>注释：本文的图来自</p>
+<p> <a href="http://www.css88.com/archives/7212">http://www.css88.com/archives/7212</a></p>
+<p><a href="http://www.w3cplus.com/css3/a-guide-to-flexbox.html">http://www.w3cplus.com/css3/a-guide-to-flexbox.html</a></p>
+<p>简介:<br>English:<br>In the flex layout model, the children of a flex container can be laid out in any direction, and can “flex” their sizes, either growing to fill unused space or shrinking to avoid overflowing the parent. Both horizontal and vertical alignment of the children can be easily manipulated. Nesting of these boxes (horizontal inside vertical, or vertical inside horizontal) can be used to build layouts in two dimensions.(<a href="https://www.w3.org/TR/2015/WD-css-flexbox-1-20150514/" title="W3C">https://www.w3.org/TR/2015/WD-css-flexbox-1-20150514/</a>)</p>
+<p>China:     flexbox的出现是为了解决复杂的web布局，因为这种布局方式很灵活。容器的子元素可以任意方向进行排列。此属性目前处于非正式标准，以下是各浏览器对flexbox的支持程度，在较新的浏览器中基本可以使用该属性。</p></p>
+            <p class="article-more-link">
+                <a href="/2017/03/31/Flexbox/#more">Read More</a>
+            </p>
+        
+        </div>
+        <footer class="article-footer">
+            <div class="share-container">
+
+
+
+</div>
+
+    <a data-url="http://yoursite.com/2017/03/31/Flexbox/" data-id="cj1hlt1c900008cno6oglib86" class="article-share-link"><i class="fa fa-share"></i>Share</a>
+<script>
+    (function ($) {
+        // Prevent duplicate binding
+        if (typeof(__SHARE_BUTTON_BINDED__) === 'undefined' || !__SHARE_BUTTON_BINDED__) {
+            __SHARE_BUTTON_BINDED__ = true;
+        } else {
+            return;
+        }
+        $('body').on('click', function() {
+            $('.article-share-box.on').removeClass('on');
+        }).on('click', '.article-share-link', function(e) {
+            e.stopPropagation();
+
+            var $this = $(this),
+                url = $this.attr('data-url'),
+                encodedUrl = encodeURIComponent(url),
+                id = 'article-share-box-' + $this.attr('data-id'),
+                offset = $this.offset(),
+                box;
+
+            if ($('#' + id).length) {
+                box = $('#' + id);
+
+                if (box.hasClass('on')){
+                    box.removeClass('on');
+                    return;
+                }
+            } else {
+                var html = [
+                    '<div id="' + id + '" class="article-share-box">',
+                        '<input class="article-share-input" value="' + url + '">',
+                        '<div class="article-share-links">',
+                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="fa fa-twitter article-share-twitter" target="_blank" title="Twitter"></a>',
+                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="fa fa-facebook article-share-facebook" target="_blank" title="Facebook"></a>',
+                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="fa fa-pinterest article-share-pinterest" target="_blank" title="Pinterest"></a>',
+                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="fa fa-google article-share-google" target="_blank" title="Google+"></a>',
+                        '</div>',
+                    '</div>'
+                ].join('');
+
+              box = $(html);
+
+              $('body').append(box);
+            }
+
+            $('.article-share-box.on').hide();
+
+            box.css({
+                top: offset.top + 25,
+                left: offset.left
+            }).addClass('on');
+
+        }).on('click', '.article-share-box', function (e) {
+            e.stopPropagation();
+        }).on('click', '.article-share-box-input', function () {
+            $(this).select();
+        }).on('click', '.article-share-box-link', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
+        });
+    })(jQuery);
+</script>
+
+            
+    
+        <a href="http://yoursite.com/2017/03/31/Flexbox/#comments" class="article-comment-link disqus-comment-count" data-disqus-url="http://yoursite.com/2017/03/31/Flexbox/">Comments</a>
     
 
         </footer>
@@ -374,7 +525,7 @@
 
 </div>
 
-    <a data-url="http://yoursite.com/2016/10/05/vue01/" data-id="cj14cfmo100195wnopv44q1lo" class="article-share-link"><i class="fa fa-share"></i>Partager</a>
+    <a data-url="http://yoursite.com/2016/10/05/vue01/" data-id="cj1hlt1dd000v8cnoxntzn7bt" class="article-share-link"><i class="fa fa-share"></i>Share</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -442,7 +593,7 @@
 
             
     
-        <a href="http://yoursite.com/2016/10/05/vue01/#comments" class="article-comment-link disqus-comment-count" data-disqus-url="http://yoursite.com/2016/10/05/vue01/">Commentaires</a>
+        <a href="http://yoursite.com/2016/10/05/vue01/#comments" class="article-comment-link disqus-comment-count" data-disqus-url="http://yoursite.com/2016/10/05/vue01/">Comments</a>
     
 
         </footer>
@@ -504,7 +655,7 @@
 
 </div>
 
-    <a data-url="http://yoursite.com/2016/08/28/MongoDB02/" data-id="cj14cfmmx00035wnon22dmpab" class="article-share-link"><i class="fa fa-share"></i>Partager</a>
+    <a data-url="http://yoursite.com/2016/08/28/MongoDB02/" data-id="cj1hlt1cj00058cnoc7a0rvt2" class="article-share-link"><i class="fa fa-share"></i>Share</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -572,7 +723,7 @@
 
             
     
-        <a href="http://yoursite.com/2016/08/28/MongoDB02/#comments" class="article-comment-link disqus-comment-count" data-disqus-url="http://yoursite.com/2016/08/28/MongoDB02/">Commentaires</a>
+        <a href="http://yoursite.com/2016/08/28/MongoDB02/#comments" class="article-comment-link disqus-comment-count" data-disqus-url="http://yoursite.com/2016/08/28/MongoDB02/">Comments</a>
     
 
         </footer>
@@ -634,7 +785,7 @@
 
 </div>
 
-    <a data-url="http://yoursite.com/2016/08/25/MongoDB01/" data-id="cj14cfmmn00005wno9r3qjkpx" class="article-share-link"><i class="fa fa-share"></i>Partager</a>
+    <a data-url="http://yoursite.com/2016/08/25/MongoDB01/" data-id="cj1hlt1cj00078cno15s86iz3" class="article-share-link"><i class="fa fa-share"></i>Share</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -702,7 +853,7 @@
 
             
     
-        <a href="http://yoursite.com/2016/08/25/MongoDB01/#comments" class="article-comment-link disqus-comment-count" data-disqus-url="http://yoursite.com/2016/08/25/MongoDB01/">Commentaires</a>
+        <a href="http://yoursite.com/2016/08/25/MongoDB01/#comments" class="article-comment-link disqus-comment-count" data-disqus-url="http://yoursite.com/2016/08/25/MongoDB01/">Comments</a>
     
 
         </footer>
@@ -766,7 +917,7 @@
 
 </div>
 
-    <a data-url="http://yoursite.com/2016/08/22/node03/" data-id="cj14cfmnr00105wno01qxs35w" class="article-share-link"><i class="fa fa-share"></i>Partager</a>
+    <a data-url="http://yoursite.com/2016/08/22/node03/" data-id="cj1hlt1dd000s8cnovkq973cn" class="article-share-link"><i class="fa fa-share"></i>Share</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -834,7 +985,7 @@
 
             
     
-        <a href="http://yoursite.com/2016/08/22/node03/#comments" class="article-comment-link disqus-comment-count" data-disqus-url="http://yoursite.com/2016/08/22/node03/">Commentaires</a>
+        <a href="http://yoursite.com/2016/08/22/node03/#comments" class="article-comment-link disqus-comment-count" data-disqus-url="http://yoursite.com/2016/08/22/node03/">Comments</a>
     
 
         </footer>
@@ -907,7 +1058,7 @@ emitter.setMaxListeners(n)
 
 </div>
 
-    <a data-url="http://yoursite.com/2016/08/19/node02/" data-id="cj14cfmnr000x5wno8c0fj043" class="article-share-link"><i class="fa fa-share"></i>Partager</a>
+    <a data-url="http://yoursite.com/2016/08/19/node02/" data-id="cj1hlt1dd000r8cnotc9g6xh0" class="article-share-link"><i class="fa fa-share"></i>Share</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -975,7 +1126,7 @@ emitter.setMaxListeners(n)
 
             
     
-        <a href="http://yoursite.com/2016/08/19/node02/#comments" class="article-comment-link disqus-comment-count" data-disqus-url="http://yoursite.com/2016/08/19/node02/">Commentaires</a>
+        <a href="http://yoursite.com/2016/08/19/node02/#comments" class="article-comment-link disqus-comment-count" data-disqus-url="http://yoursite.com/2016/08/19/node02/">Comments</a>
     
 
         </footer>
@@ -1035,7 +1186,7 @@ emitter.setMaxListeners(n)
 
 </div>
 
-    <a data-url="http://yoursite.com/2016/07/17/node01/" data-id="cj14cfmnr000w5wno0ddwbgy8" class="article-share-link"><i class="fa fa-share"></i>Partager</a>
+    <a data-url="http://yoursite.com/2016/07/17/node01/" data-id="cj1hlt1d3000o8cno366dbmok" class="article-share-link"><i class="fa fa-share"></i>Share</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -1103,7 +1254,7 @@ emitter.setMaxListeners(n)
 
             
     
-        <a href="http://yoursite.com/2016/07/17/node01/#comments" class="article-comment-link disqus-comment-count" data-disqus-url="http://yoursite.com/2016/07/17/node01/">Commentaires</a>
+        <a href="http://yoursite.com/2016/07/17/node01/#comments" class="article-comment-link disqus-comment-count" data-disqus-url="http://yoursite.com/2016/07/17/node01/">Comments</a>
     
 
         </footer>
@@ -1173,7 +1324,7 @@ emitter.setMaxListeners(n)
 
 </div>
 
-    <a data-url="http://yoursite.com/2016/06/05/webpackStudy/" data-id="cj14cfmo100135wno16flsuqz" class="article-share-link"><i class="fa fa-share"></i>Partager</a>
+    <a data-url="http://yoursite.com/2016/06/05/webpackStudy/" data-id="cj1hlt1dn00118cnoucic31dh" class="article-share-link"><i class="fa fa-share"></i>Share</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -1241,7 +1392,7 @@ emitter.setMaxListeners(n)
 
             
     
-        <a href="http://yoursite.com/2016/06/05/webpackStudy/#comments" class="article-comment-link disqus-comment-count" data-disqus-url="http://yoursite.com/2016/06/05/webpackStudy/">Commentaires</a>
+        <a href="http://yoursite.com/2016/06/05/webpackStudy/#comments" class="article-comment-link disqus-comment-count" data-disqus-url="http://yoursite.com/2016/06/05/webpackStudy/">Comments</a>
     
 
         </footer>
@@ -1309,7 +1460,7 @@ emitter.setMaxListeners(n)
 
 </div>
 
-    <a data-url="http://yoursite.com/2016/06/03/手机端的web资源整合/" data-id="cj14cfmo100155wnoporjl727" class="article-share-link"><i class="fa fa-share"></i>Partager</a>
+    <a data-url="http://yoursite.com/2016/06/03/手机端的web资源整合/" data-id="cj1hlt1dd000x8cnopwnfg140" class="article-share-link"><i class="fa fa-share"></i>Share</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -1377,140 +1528,7 @@ emitter.setMaxListeners(n)
 
             
     
-        <a href="http://yoursite.com/2016/06/03/手机端的web资源整合/#comments" class="article-comment-link disqus-comment-count" data-disqus-url="http://yoursite.com/2016/06/03/手机端的web资源整合/">Commentaires</a>
-    
-
-        </footer>
-    </div>
-    
-</article>
-
-
-
-    <article id="post-javascript-Ajax" class="article article-type-post" itemscope itemprop="blogPost">
-    <div class="article-inner">
-        
-        
-            <header class="article-header">
-                
-    
-        <h1 itemprop="name">
-            <a class="article-title" href="/2016/05/14/javascript-Ajax/">javascript_Ajax</a>
-        </h1>
-    
-
-                
-                    <div class="article-meta">
-                        
-    <div class="article-date">
-        <i class="fa fa-calendar"></i>
-        <a href="/2016/05/14/javascript-Ajax/">
-            <time datetime="2016-05-14T09:33:01.000Z" itemprop="datePublished">2016-05-14</time>
-        </a>
-    </div>
-
-
-                        
-                        
-    <div class="article-tag">
-        <i class="fa fa-tag"></i>
-        <a class="tag-link" href="/tags/Ajax/">Ajax</a>, <a class="tag-link" href="/tags/Javascript/">Javascript</a>
-    </div>
-
-                    </div>
-                
-            </header>
-        
-        
-        <div class="article-entry" itemprop="articleBody">
-        
-            <p><h1 id="Ajax"><a href="#Ajax" class="headerlink" title="Ajax"></a>Ajax</h1><p>AJAX即“Asynchronous Javascript And XML”（异步JavaScript和XML），是指一种创建交互式网页应用的网页开发技术。</p>
-<p>AJAX = 异步 JavaScript和XML（标准通用标记语言的子集）。</p>
-<p>AJAX 是一种用于创建快速动态网页的技术。</p>
-<p>通过在后台与服务器进行少量数据交换，AJAX 可以使网页实现异步更新。这意味着可以在不重新加载整个网页的情况下，对网页的某部分进行更新。</p>
-<p>传统的网页（不使用 AJAX）如果需要更新内容，必须重载整个网页页面。</p>
-<p>Ajax 的核心是 JavaScript 对象 XMLHttpRequest。该对象在 Internet Explorer 5 中首次引入，它是一种支持异步请求的技术。简而言之，XMLHttpRequest使您可以使用 JavaScript 向服务器提出请求并处理响应，而不阻塞用户。</p></p>
-            <p class="article-more-link">
-                <a href="/2016/05/14/javascript-Ajax/#more">Read More</a>
-            </p>
-        
-        </div>
-        <footer class="article-footer">
-            <div class="share-container">
-
-
-
-</div>
-
-    <a data-url="http://yoursite.com/2016/05/14/javascript-Ajax/" data-id="cj14cfmmx00055wno9ou0btpo" class="article-share-link"><i class="fa fa-share"></i>Partager</a>
-<script>
-    (function ($) {
-        // Prevent duplicate binding
-        if (typeof(__SHARE_BUTTON_BINDED__) === 'undefined' || !__SHARE_BUTTON_BINDED__) {
-            __SHARE_BUTTON_BINDED__ = true;
-        } else {
-            return;
-        }
-        $('body').on('click', function() {
-            $('.article-share-box.on').removeClass('on');
-        }).on('click', '.article-share-link', function(e) {
-            e.stopPropagation();
-
-            var $this = $(this),
-                url = $this.attr('data-url'),
-                encodedUrl = encodeURIComponent(url),
-                id = 'article-share-box-' + $this.attr('data-id'),
-                offset = $this.offset(),
-                box;
-
-            if ($('#' + id).length) {
-                box = $('#' + id);
-
-                if (box.hasClass('on')){
-                    box.removeClass('on');
-                    return;
-                }
-            } else {
-                var html = [
-                    '<div id="' + id + '" class="article-share-box">',
-                        '<input class="article-share-input" value="' + url + '">',
-                        '<div class="article-share-links">',
-                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="fa fa-twitter article-share-twitter" target="_blank" title="Twitter"></a>',
-                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="fa fa-facebook article-share-facebook" target="_blank" title="Facebook"></a>',
-                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="fa fa-pinterest article-share-pinterest" target="_blank" title="Pinterest"></a>',
-                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="fa fa-google article-share-google" target="_blank" title="Google+"></a>',
-                        '</div>',
-                    '</div>'
-                ].join('');
-
-              box = $(html);
-
-              $('body').append(box);
-            }
-
-            $('.article-share-box.on').hide();
-
-            box.css({
-                top: offset.top + 25,
-                left: offset.left
-            }).addClass('on');
-
-        }).on('click', '.article-share-box', function (e) {
-            e.stopPropagation();
-        }).on('click', '.article-share-box-input', function () {
-            $(this).select();
-        }).on('click', '.article-share-box-link', function (e) {
-            e.preventDefault();
-            e.stopPropagation();
-
-            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
-        });
-    })(jQuery);
-</script>
-
-            
-    
-        <a href="http://yoursite.com/2016/05/14/javascript-Ajax/#comments" class="article-comment-link disqus-comment-count" data-disqus-url="http://yoursite.com/2016/05/14/javascript-Ajax/">Commentaires</a>
+        <a href="http://yoursite.com/2016/06/03/手机端的web资源整合/#comments" class="article-comment-link disqus-comment-count" data-disqus-url="http://yoursite.com/2016/06/03/手机端的web资源整合/">Comments</a>
     
 
         </footer>
@@ -1521,7 +1539,7 @@ emitter.setMaxListeners(n)
 
 
     <nav id="page-nav">
-        <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/">Suiv &raquo;</a>
+        <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><a class="extend next" rel="next" href="/page/2/">Next &raquo;</a>
     </nav>
 </section>
             
@@ -1529,9 +1547,28 @@ emitter.setMaxListeners(n)
    
         
     <div class="widget-wrap">
-        <h3 class="widget-title">Récents</h3>
+        <h3 class="widget-title">recent</h3>
         <div class="widget">
             <ul id="recent-post" class="">
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="/2017/04/14/THe-font-Size/" class="thumbnail">
+    
+    
+        <span class="thumbnail-image thumbnail-none"></span>
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"></p>
+                            <p class="item-title"><a href="/2017/04/14/THe-font-Size/" class="title">THe_font-Size</a></p>
+                            <p class="item-date"><time datetime="2017-04-14T08:58:23.000Z" itemprop="datePublished">2017-04-14</time></p>
+                        </div>
+                    </li>
                 
                     <li>
                         
@@ -1609,25 +1646,6 @@ emitter.setMaxListeners(n)
                         </div>
                     </li>
                 
-                    <li>
-                        
-                        <div class="item-thumbnail">
-                            <a href="/2016/08/22/node03/" class="thumbnail">
-    
-    
-        <span class="thumbnail-image thumbnail-none"></span>
-    
-</a>
-
-                        </div>
-                        
-                        <div class="item-inner">
-                            <p class="item-category"></p>
-                            <p class="item-title"><a href="/2016/08/22/node03/" class="title">node03</a></p>
-                            <p class="item-date"><time datetime="2016-08-22T05:09:28.000Z" itemprop="datePublished">2016-08-22</time></p>
-                        </div>
-                    </li>
-                
             </ul>
         </div>
     </div>
@@ -1637,34 +1655,34 @@ emitter.setMaxListeners(n)
     
         
     <div class="widget-wrap">
-        <h3 class="widget-title">Archives</h3>
+        <h3 class="widget-title">archives</h3>
         <div class="widget">
-            <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/03/">March 2017</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/10/">October 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/08/">August 2016</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/07/">July 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/06/">June 2016</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/05/">May 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/04/">April 2016</a><span class="archive-list-count">10</span></li></ul>
+            <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/04/">April 2017</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/03/">March 2017</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/10/">October 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/08/">August 2016</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/07/">July 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/06/">June 2016</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/05/">May 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/04/">April 2016</a><span class="archive-list-count">10</span></li></ul>
         </div>
     </div>
 
     
         
     <div class="widget-wrap">
-        <h3 class="widget-title">Tags</h3>
+        <h3 class="widget-title">tags</h3>
         <div class="widget">
-            <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Ajax/">Ajax</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/DB/">DB</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Flexbox/">Flexbox</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Functionss/">Functionss</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/JavaScript/">JavaScript</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Javascript/">Javascript</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/javascript/">javascript</a><span class="tag-list-count">5</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/jsBOM/">jsBOM</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/js对象/">js对象</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/node/">node</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/phoneWeb/">phoneWeb</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/vue/">vue</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/webpack/">webpack</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/移动前端/">移动前端</a><span class="tag-list-count">1</span></li></ul>
+            <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Ajax/">Ajax</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/DB/">DB</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Flexbox/">Flexbox</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Functionss/">Functionss</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/JavaScript/">JavaScript</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Javascript/">Javascript</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/font-Size/">font-Size</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/javascript/">javascript</a><span class="tag-list-count">5</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/jsBOM/">jsBOM</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/js对象/">js对象</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/node/">node</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/phoneWeb/">phoneWeb</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/vue/">vue</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/webpack/">webpack</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/移动前端/">移动前端</a><span class="tag-list-count">1</span></li></ul>
         </div>
     </div>
 
     
         
     <div class="widget-wrap">
-        <h3 class="widget-title">Nuage de tags</h3>
+        <h3 class="widget-title">tag cloud</h3>
         <div class="widget tagcloud">
-            <a href="/tags/Ajax/" style="font-size: 10px;">Ajax</a> <a href="/tags/DB/" style="font-size: 13.33px;">DB</a> <a href="/tags/Flexbox/" style="font-size: 10px;">Flexbox</a> <a href="/tags/Functionss/" style="font-size: 10px;">Functionss</a> <a href="/tags/JavaScript/" style="font-size: 10px;">JavaScript</a> <a href="/tags/Javascript/" style="font-size: 10px;">Javascript</a> <a href="/tags/javascript/" style="font-size: 20px;">javascript</a> <a href="/tags/jsBOM/" style="font-size: 10px;">jsBOM</a> <a href="/tags/js对象/" style="font-size: 10px;">js对象</a> <a href="/tags/node/" style="font-size: 16.67px;">node</a> <a href="/tags/phoneWeb/" style="font-size: 10px;">phoneWeb</a> <a href="/tags/vue/" style="font-size: 10px;">vue</a> <a href="/tags/webpack/" style="font-size: 10px;">webpack</a> <a href="/tags/移动前端/" style="font-size: 10px;">移动前端</a>
+            <a href="/tags/Ajax/" style="font-size: 10px;">Ajax</a> <a href="/tags/DB/" style="font-size: 13.33px;">DB</a> <a href="/tags/Flexbox/" style="font-size: 10px;">Flexbox</a> <a href="/tags/Functionss/" style="font-size: 10px;">Functionss</a> <a href="/tags/JavaScript/" style="font-size: 10px;">JavaScript</a> <a href="/tags/Javascript/" style="font-size: 10px;">Javascript</a> <a href="/tags/font-Size/" style="font-size: 10px;">font-Size</a> <a href="/tags/javascript/" style="font-size: 20px;">javascript</a> <a href="/tags/jsBOM/" style="font-size: 10px;">jsBOM</a> <a href="/tags/js对象/" style="font-size: 10px;">js对象</a> <a href="/tags/node/" style="font-size: 16.67px;">node</a> <a href="/tags/phoneWeb/" style="font-size: 10px;">phoneWeb</a> <a href="/tags/vue/" style="font-size: 10px;">vue</a> <a href="/tags/webpack/" style="font-size: 10px;">webpack</a> <a href="/tags/移动前端/" style="font-size: 10px;">移动前端</a>
         </div>
     </div>
 
     
         
     <div class="widget-wrap widget-list">
-        <h3 class="widget-title">Liens</h3>
+        <h3 class="widget-title">links</h3>
         <div class="widget">
             <ul>
                 
