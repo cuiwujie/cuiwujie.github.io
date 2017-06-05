@@ -1,0 +1,766 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next muse use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="git," />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.0" />
+
+
+
+
+
+
+<meta name="description" content="git命令学习跟着廖雪峰老师的网站总结的几个常用的命令，由于使用的Window操作系统所以就直说该操作系统下操作了。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="git命令">
+<meta property="og:url" content="http://yoursite.com/2017/05/04/git命令/index.html">
+<meta property="og:site_name" content="MrCui's Blog">
+<meta property="og:description" content="git命令学习跟着廖雪峰老师的网站总结的几个常用的命令，由于使用的Window操作系统所以就直说该操作系统下操作了。">
+<meta property="og:image" content="http://oqsrtiv7s.bkt.clouddn.com/1-1.png">
+<meta property="og:image" content="http://oqsrtiv7s.bkt.clouddn.com/1-2.png">
+<meta property="og:image" content="http://oqsrtiv7s.bkt.clouddn.com/1-3.png">
+<meta property="og:image" content="http://oqsrtiv7s.bkt.clouddn.com/1-4.png">
+<meta property="og:image" content="http://oqsrtiv7s.bkt.clouddn.com/1-5.png">
+<meta property="og:image" content="http://oqsrtiv7s.bkt.clouddn.com/1-6.png">
+<meta property="og:image" content="http://oqsrtiv7s.bkt.clouddn.com/1-7.png">
+<meta property="og:image" content="http://oqsrtiv7s.bkt.clouddn.com/1-8.png">
+<meta property="og:image" content="http://oqsrtiv7s.bkt.clouddn.com/1-9.png">
+<meta property="og:image" content="http://oqsrtiv7s.bkt.clouddn.com/1-10.png">
+<meta property="og:image" content="http://oqsrtiv7s.bkt.clouddn.com/1-11.png">
+<meta property="og:image" content="http://oqsrtiv7s.bkt.clouddn.com/1-12.png">
+<meta property="og:image" content="http://oqsrtiv7s.bkt.clouddn.com/1-13.png">
+<meta property="og:image" content="http://oqsrtiv7s.bkt.clouddn.com/1-14.png">
+<meta property="og:updated_time" content="2017-06-05T10:17:18.215Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="git命令">
+<meta name="twitter:description" content="git命令学习跟着廖雪峰老师的网站总结的几个常用的命令，由于使用的Window操作系统所以就直说该操作系统下操作了。">
+<meta name="twitter:image" content="http://oqsrtiv7s.bkt.clouddn.com/1-1.png">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Muse',
+    sidebar: {"position":"left","display":"post"},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2017/05/04/git命令/"/>
+
+
+
+
+
+  <title> git命令 | MrCui's Blog </title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-meta ">
+  
+
+  <div class="custom-logo-site-title">
+    <a href="/"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">MrCui's Blog</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+  <p class="site-subtitle">花逞春光，一番雨，一番风，终归尘土;竹坚雅操，几朝霜几朝雪，傲就琅矸</p>
+</div>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="http://cuiwujie.duapp.com/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+  <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/05/04/git命令/">
+
+  <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <meta itemprop="name" content="cui wujie">
+    <meta itemprop="description" content="">
+    <meta itemprop="image" content="/images/avatar.png">
+  </span>
+
+  <span style="display:none" itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="MrCui's Blog">
+    <span style="display:none" itemprop="logo" itemscope itemtype="http://schema.org/ImageObject">
+      <img style="display:none;" itemprop="url image" alt="MrCui's Blog" src="">
+    </span>
+  </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                git命令
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-05-04T18:14:04+08:00">
+                2017-05-04
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+
+          
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h1 id="git命令学习"><a href="#git命令学习" class="headerlink" title="git命令学习"></a>git命令学习</h1><p>跟着廖雪峰老师的网站总结的几个常用的命令，由于使用的Window操作系统所以就直说该操作系统下操作了。</p>
+<a id="more"></a>
+<h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><p>首先是安装，从网下下载一个，然后选择默认命令安装即可，这里没有什么可说的。安装完成后一般点击鼠标右键找到”Git Bash Here”弹出一个类似命令行窗口的东西说明Git安装成功。</p>
+<p><img src="http://oqsrtiv7s.bkt.clouddn.com/1-1.png" alt=""></p>
+<p>安装完成之后在命令行中输入设置</p>
+<pre><code>git config --global user.name &quot;Your Name&quot;
+git config --global user.email &quot;email@example.com&quot;
+</code></pre><h2 id="创建版本库"><a href="#创建版本库" class="headerlink" title="创建版本库"></a>创建版本库</h2><p>创建一个版本库非常简单，首先，选择一个合适的地方，创建一个空目录：</p>
+<pre><code>$ mkdir gitproject01
+$ cd gitproject01
+$ pwd
+/d/study/gitproject01
+</code></pre><p>注释：我在D盘在有一个文件夹Study中点击鼠标右键“Git Bash Here”</p>
+<p><img src="http://oqsrtiv7s.bkt.clouddn.com/1-2.png" alt=""></p>
+<h2 id="初始化："><a href="#初始化：" class="headerlink" title="初始化："></a>初始化：</h2><pre><code>git init
+</code></pre><p><img src="http://oqsrtiv7s.bkt.clouddn.com/1-3.png" alt=""></p>
+<p>瞬间Git就把仓库建好了，而且告诉你是一个空的仓库（empty Git repository）</p>
+<p>注意：</p>
+<p>首先这里再明确一下，所有的版本控制系统，其实只能跟踪文本文件的改动，比如TXT文件，网页，所有的程序代码等等，Git也不例外。版本控制系统可以告诉你每次的改动，比如在第5行加了一个单词“Linux”，在第8行删了一个单词“Windows”。而图片、视频这些二进制文件，虽然也能由版本控制系统管理，但没法跟踪文件的变化，只能把二进制文件每次改动串起来，也就是只知道图片从100KB改成了120KB，但到底改了啥，版本控制系统不知道，也没法知道。</p>
+<h2 id="添加文件"><a href="#添加文件" class="headerlink" title="添加文件"></a>添加文件</h2><pre><code>//第一步，使用命令git add &lt;file&gt;，注意，可反复多次使用，添加多个文件；
+1. git add
+// 第二步，使用命令git commit，完成。
+2. git commit -m &quot;提示消息&quot;
+//  要随时掌握工作区的状态，使用git status命令
+ git status
+//  如果git status告诉你有文件被修改过，用git diff可以查看修改内容
+</code></pre><p><img src="http://oqsrtiv7s.bkt.clouddn.com/1-4.png" alt=""></p>
+<pre><code>git diff
+</code></pre><h2 id="版本回退"><a href="#版本回退" class="headerlink" title="版本回退"></a>版本回退</h2><p>查看历史记录</p>
+<pre><code>git log
+</code></pre><p><img src="http://oqsrtiv7s.bkt.clouddn.com/1-5.png" alt=""></p>
+<p>git log命令显示从最近到最远的提交日志，我们可以看到2次提交，最近一次提交的是” second commit<br>“上一次是”first commit” ,如果嫌输出信息太多，看得眼花缭乱的，可以试试加上–pretty=oneline参数：</p>
+<p><img src="http://oqsrtiv7s.bkt.clouddn.com/1-6.png" alt=""></p>
+<p>版本回退</p>
+<p>首先，Git必须知道当前版本是哪个版本，在Git中，用HEAD表示当前版本，也就是最新的提交3628164…882e1e0（注意我的提交ID和你的肯定不一样），上一个版本就是HEAD^，上上一个版本就是HEAD^^，当然往上100个版本写100个^比较容易数不过来，所以写成HEAD~100。</p>
+<pre><code>git reset --hard HEAD^
+</code></pre><p>已经回退成功：</p>
+<p><img src="http://oqsrtiv7s.bkt.clouddn.com/1-7.png" alt=""></p>
+<p>最新的那个版本append GPL已经看不到了！</p>
+<p>想再回去已经回不去了，其实还是有的，只要上面的命令行窗口还没有被关掉，你就可以顺着往上找啊找啊，找到那个append GPL的commit id是8b5ba3670f75dc20ecebf561841e576770168c1c …，于是就可以指定回到未来的某个版本：</p>
+<pre><code>git reset --hard 8b5ba3670
+</code></pre><p>版本号没必要写全，前几位就可以了，Git会自动去找。当然也不能只写前一两位，因为Git可能会找到多个版本号，就无法确定是哪一个了。</p>
+<p><img src="http://oqsrtiv7s.bkt.clouddn.com/1-8.png" alt=""></p>
+<p>已经回到最新的</p>
+<p><img src="http://oqsrtiv7s.bkt.clouddn.com/1-9.png" alt=""></p>
+<p>现在，你回退到了某个版本，关掉了电脑，第二天早上就后悔了，想恢复到新版本怎么办？找不到新版本的commit id怎么办？</p>
+<p>在Git中，总是有后悔药可以吃的。当你用$ git reset –hard HEAD^回退到add distributed版本时，再想恢复到append GPL，就必须找到append GPL的commit id。Git提供了一个命令git reflog用来记录你的每一次命令：</p>
+<pre><code>git reflog
+</code></pre><p><img src="http://oqsrtiv7s.bkt.clouddn.com/1-10.png" alt=""></p>
+<h2 id="撤销修改"><a href="#撤销修改" class="headerlink" title="撤销修改"></a>撤销修改</h2><pre><code>git checkout -- README.txt
+</code></pre><p>命令git checkout – readme.txt意思就是，把readme.txt文件在工作区的修改全部撤销，这里有两种情况：</p>
+<ol>
+<li><p>一种是readme.txt自修改后还没有被放到暂存区，现在，撤销修改就回到和版本库一模一样的状态；</p>
+</li>
+<li><p>一种是readme.txt已经添加到暂存区后，又作了修改，现在，撤销修改就回到添加到暂存区后的状态。</p>
+</li>
+</ol>
+<p>没有提交之前的，可以撤销</p>
+<h3 id="小结"><a href="#小结" class="headerlink" title="小结"></a>小结</h3><ol>
+<li><p>场景1：当你改乱了工作区某个文件的内容，想直接丢弃工作区的修改时，用命令git checkout – file。</p>
+</li>
+<li><p>场景2：当你不但改乱了工作区某个文件的内容，还添加到了暂存区时，想丢弃修改，分两步，第一步用命令git reset HEAD file，就回到了场景1，第二步按场景1操作。</p>
+</li>
+<li><p>场景3：已经提交了不合适的修改到版本库时，想要撤销本次提交，参考版本回退一节，不过前提是没有推送到远程库。</p>
+</li>
+</ol>
+<h2 id="删除文件"><a href="#删除文件" class="headerlink" title="删除文件"></a>删除文件</h2><p>先添加一个新文件test.txt到Git并且提交：</p>
+<pre><code>git add test.txt
+git commit -m &quot;add test.txt&quot;
+</code></pre><p><img src="http://oqsrtiv7s.bkt.clouddn.com/1-11.png" alt=""></p>
+<p>一般情况下，你通常直接在文件管理器中把没用的文件删了，或者用rm命令删了：</p>
+<pre><code>rm test.txt
+</code></pre><p>这个时候，Git知道你删除了文件，因此，工作区和版本库就不一致了，git status命令会立刻告诉你哪些文件被删除了：</p>
+<p><img src="http://oqsrtiv7s.bkt.clouddn.com/1-12.png" alt=""></p>
+<p>一是确实要从版本库中删除该文件，那就用命令git rm删掉，并且git commit：</p>
+<pre><code>git rm test.txt
+git commit -m &quot;remove test.txt&quot;
+</code></pre><p><img src="http://oqsrtiv7s.bkt.clouddn.com/1-13.png" alt=""></p>
+<p>文件已经删除</p>
+<p><img src="http://oqsrtiv7s.bkt.clouddn.com/1-14.png" alt=""></p>
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/git/" rel="tag"># git</a>
+          
+        </div>
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2017/04/14/THe-font-Size/" rel="next" title="THe_font-Size">
+                <i class="fa fa-chevron-left"></i> THe_font-Size
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2017/05/05/git命令2/" rel="prev" title="git命令2">
+                git命令2 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/images/avatar.png"
+               alt="cui wujie" />
+          <p class="site-author-name" itemprop="name">cui wujie</p>
+          <p class="site-description motion-element" itemprop="description"></p>
+        </div>
+        <nav class="site-state motion-element">
+          <div class="site-state-item site-state-posts">
+            <a href="/archives">
+              <span class="site-state-item-count">23</span>
+              <span class="site-state-item-name">日志</span>
+            </a>
+          </div>
+
+          
+
+          
+            <div class="site-state-item site-state-tags">
+              <a href="/tags">
+                <span class="site-state-item-count">16</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/cwujie" target="_blank" title="GitHub">
+                  
+                    <i class="fa fa-fw fa-github"></i>
+                  
+                  GitHub
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://weibo.com/cwjiewb/" target="_blank" title="WeiBo">
+                  
+                    <i class="fa fa-fw fa-globe"></i>
+                  
+                  WeiBo
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="https://twitter.com/cwujie" target="_blank" title="Twitter">
+                  
+                    <i class="fa fa-fw fa-twitter"></i>
+                  
+                  Twitter
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="https://www.zhihu.com/people/cui-wu-jie-7" target="_blank" title="ZhiHu">
+                  
+                    <i class="fa fa-fw fa-globe"></i>
+                  
+                  ZhiHu
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://cwujie0229.github.io" target="_blank" title="Resume">
+                  
+                    <i class="fa fa-fw fa-globe"></i>
+                  
+                  Resume
+                </a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+
+        
+        
+
+        
+
+
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#git命令学习"><span class="nav-number">1.</span> <span class="nav-text">git命令学习</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#安装"><span class="nav-number">1.1.</span> <span class="nav-text">安装</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#创建版本库"><span class="nav-number">1.2.</span> <span class="nav-text">创建版本库</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#初始化："><span class="nav-number">1.3.</span> <span class="nav-text">初始化：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#添加文件"><span class="nav-number">1.4.</span> <span class="nav-text">添加文件</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#版本回退"><span class="nav-number">1.5.</span> <span class="nav-text">版本回退</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#撤销修改"><span class="nav-number">1.6.</span> <span class="nav-text">撤销修改</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#小结"><span class="nav-number">1.6.1.</span> <span class="nav-text">小结</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#删除文件"><span class="nav-number">1.7.</span> <span class="nav-text">删除文件</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2017</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">cui wujie</span>
+</div>
+
+
+<div class="powered-by">
+  由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Muse
+  </a>
+</div>
+
+
+        
+
+        
+      </div>
+    </footer>
+
+    <div class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
+    </div>
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.0"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.0"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.0"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.0"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.0"></script>
+
+
+
+  
+
+
+
+  
+
+
+
+
+	
+
+
+
+
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+
+</body>
+</html>

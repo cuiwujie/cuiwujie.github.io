@@ -1,11 +1,90 @@
-<!DOCTYPE html>
-<html lang=zh>
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next muse use-motion" lang="zh-Hans">
 <head>
-    <meta charset="utf-8">
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
     
-    <title>vue01 | MrCui&#39;s Blog</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
-    <meta name="description" content="概述vue.js是一个构建数据驱动的web界面的库，它只是聚焦于视图层。">
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="vue," />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.0" />
+
+
+
+
+
+
+<meta name="description" content="概述vue.js是一个构建数据驱动的web界面的库，它只是聚焦于视图层。">
 <meta property="og:type" content="article">
 <meta property="og:title" content="vue01">
 <meta property="og:url" content="http://yoursite.com/2016/10/05/vue01/index.html">
@@ -17,225 +96,234 @@
 <meta name="twitter:title" content="vue01">
 <meta name="twitter:description" content="概述vue.js是一个构建数据驱动的web界面的库，它只是聚焦于视图层。">
 <meta name="twitter:image" content="http://i.imgur.com/Q2DVXtB.png">
-    
-
-    
-
-    
-        <link rel="icon" href="/favicon.ico" />
-    
-
-    <link rel="stylesheet" href="/libs/font-awesome/css/font-awesome.min.css">
-    <link rel="stylesheet" href="/libs/open-sans/styles.css">
-    <link rel="stylesheet" href="/libs/source-code-pro/styles.css">
-
-    <link rel="stylesheet" href="/css/style.css">
-
-    <script src="/libs/jquery/2.1.3/jquery.min.js"></script>
-    
-    
-        <link rel="stylesheet" href="/libs/lightgallery/css/lightgallery.min.css">
-    
-    
-        <link rel="stylesheet" href="/libs/justified-gallery/justifiedGallery.min.css">
-    
-    
-    
-    
 
 
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Muse',
+    sidebar: {"position":"left","display":"post"},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2016/10/05/vue01/"/>
+
+
+
+
+
+  <title> vue01 | MrCui's Blog </title>
 </head>
 
-<body>
-    <div id="container">
-        <header id="header">
-    <div id="header-main" class="header-inner">
-        <div class="outer">
-            <a href="/" id="logo">
-                <i class="logo"></i>
-                <span class="site-title">MrCui&#39;s Blog</span>
-            </a>
-            <nav id="main-nav">
-                
-                    <a class="main-nav-link" href="/.">Home</a>
-                
-                    <a class="main-nav-link" href="/archives">Archives</a>
-                
-                    <a class="main-nav-link" href="http://cuiwujie.duapp.com/">About</a>
-                
-            </nav>
-            
-                
-                <nav id="sub-nav">
-                    <div class="profile" id="profile-nav">
-                        <a id="profile-anchor" href="javascript:;">
-                            <img class="avatar" src="https://www.gravatar.com/avatar/0ed1d5a3dff1310ed49e8e9d3134dcbb" />
-                            <i class="fa fa-caret-down"></i>
-                        </a>
-                    </div>
-                </nav>
-            
-            <div id="search-form-wrap">
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
 
-    <form class="search-form">
-        <input type="text" class="ins-search-input search-form-input" placeholder="Search" />
-        <button type="submit" class="search-form-submit"></button>
-    </form>
-    <div class="ins-search">
-    <div class="ins-search-mask"></div>
-    <div class="ins-search-container">
-        <div class="ins-input-wrapper">
-            <input type="text" class="ins-search-input" placeholder="Type something..." />
-            <span class="ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
-        </div>
-        <div class="ins-section-wrapper">
-            <div class="ins-section-container"></div>
-        </div>
-    </div>
-</div>
-<script>
-(function (window) {
-    var INSIGHT_CONFIG = {
-        TRANSLATION: {
-            POSTS: 'Posts',
-            PAGES: 'Pages',
-            CATEGORIES: 'Categories',
-            TAGS: 'Tags',
-            UNTITLED: '(Untitled)',
-        },
-        ROOT_URL: '/',
-        CONTENT_URL: '/content.json',
-    };
-    window.INSIGHT_CONFIG = INSIGHT_CONFIG;
-})(window);
-</script>
-<script src="/js/insight.js"></script>
+  
 
-</div>
-        </div>
-    </div>
-    <div id="main-nav-mobile" class="header-sub header-inner">
-        <table class="menu outer">
-            <tr>
-                
-                    <td><a class="main-nav-link" href="/.">Home</a></td>
-                
-                    <td><a class="main-nav-link" href="/archives">Archives</a></td>
-                
-                    <td><a class="main-nav-link" href="http://cuiwujie.duapp.com/">About</a></td>
-                
-                <td>
-                    
-    <div class="search-form">
-        <input type="text" class="ins-search-input search-form-input" placeholder="Search" />
-    </div>
 
-                </td>
-            </tr>
-        </table>
-    </div>
-</header>
 
-        <div class="outer">
-            
-                
 
-<aside id="profile">
-    <div class="inner profile-inner">
-        <div class="base-info profile-block">
-            <img id="avatar" src="https://www.gravatar.com/avatar/0ed1d5a3dff1310ed49e8e9d3134dcbb?s=128" />
-            <h2 id="name">cuiwujie</h2>
-            <h3 id="title">The front-end engineer</h3>
-            <span id="location"><i class="fa fa-map-marker"></i>Qinhuangdao, China</span>
-            <a id="follow" target="_blank" href="https://github.com/cwjie0229/">FOLLOW</a>
-        </div>
-        <div class="article-info profile-block">
-            <div class="article-info-block">
-                21
-                <span>posts</span>
-            </div>
-            <div class="article-info-block">
-                15
-                <span>tags</span>
-            </div>
-        </div>
-        
-        <div class="profile-block social-links">
-            <table>
-                <tr>
-                    
-                    
-                    <td>
-                        <a href="https://github.com/cwjie0229/" target="_blank" title="github" class=tooltip>
-                            <i class="fa fa-github"></i>
-                        </a>
-                    </td>
-                    
-                    <td>
-                        <a href="https://twitter.com/cwujie/" target="_blank" title="Twitter" class=tooltip>
-                            <i class="fa fa-Twitter"></i>
-                        </a>
-                    </td>
-                    
-                    <td>
-                        <a href="https://segmentfault.com/u/mulanchenghu_58cf323b8093f" target="_blank" title="stack-overflow" class=tooltip>
-                            <i class="fa fa-stack-overflow"></i>
-                        </a>
-                    </td>
-                    
-                    <td>
-                        <a href="http://weibo.com/cwjiewb/" target="_blank" title="weibo" class=tooltip>
-                            <i class="fa fa-weibo"></i>
-                        </a>
-                    </td>
-                    
-                </tr>
-            </table>
-        </div>
-        
-    </div>
-</aside>
 
-            
-            <section id="main"><article id="post-vue01" class="article article-type-post" itemscope itemprop="blogPost">
-    <div class="article-inner">
-        
-        
-            <header class="article-header">
-                
+
+
+
+
+
+  
+  
     
-        <h1 class="article-title" itemprop="name">
-            vue01
-        </h1>
+  
+
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-meta ">
+  
+
+  <div class="custom-logo-site-title">
+    <a href="/"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">MrCui's Blog</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+  <p class="site-subtitle">花逞春光，一番雨，一番风，终归尘土;竹坚雅操，几朝霜几朝雪，傲就琅矸</p>
+</div>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="http://cuiwujie.duapp.com/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
     
 
-                
-                    <div class="article-meta">
-                        
-    <div class="article-date">
-        <i class="fa fa-calendar"></i>
-        <a href="/2016/10/05/vue01/">
-            <time datetime="2016-10-05T12:07:40.000Z" itemprop="datePublished">2016-10-05</time>
-        </a>
-    </div>
+  
 
+  
+  
+  
 
-                        
-                        
-    <div class="article-tag">
-        <i class="fa fa-tag"></i>
-        <a class="tag-link" href="/tags/vue/">vue</a>
-    </div>
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+  <link itemprop="mainEntityOfPage" href="http://yoursite.com/2016/10/05/vue01/">
 
-                    </div>
-                
-            </header>
+  <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <meta itemprop="name" content="cui wujie">
+    <meta itemprop="description" content="">
+    <meta itemprop="image" content="/images/avatar.png">
+  </span>
+
+  <span style="display:none" itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="MrCui's Blog">
+    <span style="display:none" itemprop="logo" itemscope itemtype="http://schema.org/ImageObject">
+      <img style="display:none;" itemprop="url image" alt="MrCui's Blog" src="">
+    </span>
+  </span>
+
+    
+      <header class="post-header">
+
         
         
-        <div class="article-entry" itemprop="articleBody">
-        
+          <h1 class="post-title" itemprop="name headline">
             
-            <h1 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h1><p>vue.js是一个构建数据驱动的web界面的库，它只是聚焦于视图层。</p>
+            
+              
+                vue01
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2016-10-05T20:07:40+08:00">
+                2016-10-05
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+
+          
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h1 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h1><p>vue.js是一个构建数据驱动的web界面的库，它只是聚焦于视图层。</p>
 <a id="more"></a>
 <h1 id="vue-实例"><a href="#vue-实例" class="headerlink" title="vue 实例"></a>vue 实例</h1><h2 id="构造器"><a href="#构造器" class="headerlink" title="构造器"></a>构造器</h2><p>每个 vue.js 应用的起步都是通过构造函数 vue 创建一个 vue 的根实例：</p>
 <pre><code>var vm = new vue({
@@ -1458,331 +1546,350 @@ Vue.use(VueRouter)
 <li>用户贡献的工具</li>
 </ul>
 </div>
+      
+    </div>
+
+    <div>
+      
         
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/vue/" rel="tag"># vue</a>
+          
         </div>
-        <footer class="article-footer">
-            <div class="share-container">
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2016/08/28/MongoDB02/" rel="next" title="MongoDB02">
+                <i class="fa fa-chevron-left"></i> MongoDB02
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2017/03/31/Flexbox/" rel="prev" title="Flexbox">
+                Flexbox <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
 
 
 
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/images/avatar.png"
+               alt="cui wujie" />
+          <p class="site-author-name" itemprop="name">cui wujie</p>
+          <p class="site-description motion-element" itemprop="description"></p>
+        </div>
+        <nav class="site-state motion-element">
+          <div class="site-state-item site-state-posts">
+            <a href="/archives">
+              <span class="site-state-item-count">23</span>
+              <span class="site-state-item-name">日志</span>
+            </a>
+          </div>
+
+          
+
+          
+            <div class="site-state-item site-state-tags">
+              <a href="/tags">
+                <span class="site-state-item-count">16</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/cwujie" target="_blank" title="GitHub">
+                  
+                    <i class="fa fa-fw fa-github"></i>
+                  
+                  GitHub
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://weibo.com/cwjiewb/" target="_blank" title="WeiBo">
+                  
+                    <i class="fa fa-fw fa-globe"></i>
+                  
+                  WeiBo
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="https://twitter.com/cwujie" target="_blank" title="Twitter">
+                  
+                    <i class="fa fa-fw fa-twitter"></i>
+                  
+                  Twitter
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="https://www.zhihu.com/people/cui-wu-jie-7" target="_blank" title="ZhiHu">
+                  
+                    <i class="fa fa-fw fa-globe"></i>
+                  
+                  ZhiHu
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://cwujie0229.github.io" target="_blank" title="Resume">
+                  
+                    <i class="fa fa-fw fa-globe"></i>
+                  
+                  Resume
+                </a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+
+        
+        
+
+        
+
+
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#概述"><span class="nav-number">1.</span> <span class="nav-text">概述</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#vue-实例"><span class="nav-number">2.</span> <span class="nav-text">vue 实例</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#构造器"><span class="nav-number">2.1.</span> <span class="nav-text">构造器</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#属性与方法"><span class="nav-number">2.2.</span> <span class="nav-text">属性与方法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#实例生命周期"><span class="nav-number">2.3.</span> <span class="nav-text">实例生命周期</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#数据绑定语法"><span class="nav-number">3.</span> <span class="nav-text">数据绑定语法</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#文本"><span class="nav-number">3.1.</span> <span class="nav-text">文本</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#原始的-html"><span class="nav-number">3.2.</span> <span class="nav-text">原始的 html</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#html特性"><span class="nav-number">3.3.</span> <span class="nav-text">html特性</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#javascript表达式"><span class="nav-number">3.4.</span> <span class="nav-text">javascript表达式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#过滤器"><span class="nav-number">3.5.</span> <span class="nav-text">过滤器</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#指令"><span class="nav-number">3.6.</span> <span class="nav-text">指令</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#参数"><span class="nav-number">3.7.</span> <span class="nav-text">参数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#修饰符"><span class="nav-number">3.8.</span> <span class="nav-text">修饰符</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#缩写"><span class="nav-number">3.9.</span> <span class="nav-text">缩写</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#v-bind"><span class="nav-number">3.9.1.</span> <span class="nav-text">v-bind</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#v-on"><span class="nav-number">3.9.2.</span> <span class="nav-text">v-on</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#计算属性"><span class="nav-number">4.</span> <span class="nav-text">计算属性</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#基础例子"><span class="nav-number">4.1.</span> <span class="nav-text">基础例子</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#计算属性vs-watch"><span class="nav-number">4.2.</span> <span class="nav-text">计算属性vs.$watch</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#计算setter"><span class="nav-number">4.3.</span> <span class="nav-text">计算setter</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#计算属性的奥秘"><span class="nav-number">4.4.</span> <span class="nav-text">计算属性的奥秘</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#class-与-style绑定"><span class="nav-number">5.</span> <span class="nav-text">class 与 style绑定</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#绑定html和class"><span class="nav-number">5.1.</span> <span class="nav-text">绑定html和class</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#对象语法"><span class="nav-number">5.2.</span> <span class="nav-text">对象语法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#数组语法"><span class="nav-number">5.3.</span> <span class="nav-text">数组语法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#对象语法-1"><span class="nav-number">5.4.</span> <span class="nav-text">对象语法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#数组语法-1"><span class="nav-number">5.5.</span> <span class="nav-text">数组语法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#自动添加前缀"><span class="nav-number">5.6.</span> <span class="nav-text">自动添加前缀</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#条件渲染"><span class="nav-number">6.</span> <span class="nav-text">条件渲染</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#v-if"><span class="nav-number">6.1.</span> <span class="nav-text">v-if</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#template-v-if"><span class="nav-number">6.2.</span> <span class="nav-text">template v-if</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#v-show"><span class="nav-number">6.3.</span> <span class="nav-text">v-show</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#v-else"><span class="nav-number">6.4.</span> <span class="nav-text">v-else</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#v-if-比较-v-show"><span class="nav-number">6.5.</span> <span class="nav-text">v-if 比较 v-show</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#列表渲染"><span class="nav-number">7.</span> <span class="nav-text">列表渲染</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#v-for"><span class="nav-number">7.1.</span> <span class="nav-text">v-for</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#template-v-for"><span class="nav-number">7.2.</span> <span class="nav-text">template v-for</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#数组变动检测"><span class="nav-number">8.</span> <span class="nav-text">数组变动检测</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#替换数组"><span class="nav-number">8.1.</span> <span class="nav-text">替换数组</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#track-by"><span class="nav-number">8.2.</span> <span class="nav-text">track-by</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#问题"><span class="nav-number">8.3.</span> <span class="nav-text">问题</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#对象v-for"><span class="nav-number">8.4.</span> <span class="nav-text">对象v-for</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#值域v-for"><span class="nav-number">8.5.</span> <span class="nav-text">值域v-for</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#方法与事件处理器"><span class="nav-number">9.</span> <span class="nav-text">方法与事件处理器</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#内联语句处理器"><span class="nav-number">9.1.</span> <span class="nav-text">内联语句处理器</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#事件修饰符"><span class="nav-number">9.2.</span> <span class="nav-text">事件修饰符</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#按键修饰符"><span class="nav-number">9.3.</span> <span class="nav-text">按键修饰符</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#为什么在-html-中监听事件"><span class="nav-number">9.4.</span> <span class="nav-text">为什么在 html 中监听事件?</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#表单控件的绑定"><span class="nav-number">10.</span> <span class="nav-text">表单控件的绑定</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#基础用法"><span class="nav-number">10.1.</span> <span class="nav-text">基础用法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#text"><span class="nav-number">10.2.</span> <span class="nav-text">text</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#checkbox"><span class="nav-number">10.3.</span> <span class="nav-text">checkbox</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#radio"><span class="nav-number">10.4.</span> <span class="nav-text">radio</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#select"><span class="nav-number">10.5.</span> <span class="nav-text">select</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#绑定-value"><span class="nav-number">10.6.</span> <span class="nav-text">绑定 value</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#checkbox-1"><span class="nav-number">10.7.</span> <span class="nav-text">checkbox</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#radio-1"><span class="nav-number">10.8.</span> <span class="nav-text">radio</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#select-options"><span class="nav-number">10.9.</span> <span class="nav-text">select options</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#参数特性"><span class="nav-number">10.10.</span> <span class="nav-text">参数特性</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#lazy"><span class="nav-number">10.10.1.</span> <span class="nav-text">lazy</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#number"><span class="nav-number">10.10.2.</span> <span class="nav-text">number</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#debounce"><span class="nav-number">10.10.3.</span> <span class="nav-text">debounce</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#过渡"><span class="nav-number">11.</span> <span class="nav-text">过渡</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#css过渡"><span class="nav-number">11.1.</span> <span class="nav-text">css过渡</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#过渡的css类名"><span class="nav-number">11.2.</span> <span class="nav-text">过渡的css类名</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#自定义的过渡类名"><span class="nav-number">11.3.</span> <span class="nav-text">自定义的过渡类名</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#组件"><span class="nav-number">12.</span> <span class="nav-text">组件</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#什么是组件"><span class="nav-number">12.1.</span> <span class="nav-text">什么是组件</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#使用组件"><span class="nav-number">12.2.</span> <span class="nav-text">使用组件</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#局部注册"><span class="nav-number">12.3.</span> <span class="nav-text">局部注册</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#注册语法糖"><span class="nav-number">12.4.</span> <span class="nav-text">注册语法糖</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#组件选项问题"><span class="nav-number">12.5.</span> <span class="nav-text">组件选项问题</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#模板解析"><span class="nav-number">12.6.</span> <span class="nav-text">模板解析</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#深入响应式原理"><span class="nav-number">13.</span> <span class="nav-text">深入响应式原理</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#如何追踪变化"><span class="nav-number">13.1.</span> <span class="nav-text">如何追踪变化</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#变化检测问题"><span class="nav-number">13.2.</span> <span class="nav-text">变化检测问题</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#初始化数据"><span class="nav-number">13.3.</span> <span class="nav-text">初始化数据</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#异步更新队列"><span class="nav-number">13.4.</span> <span class="nav-text">异步更新队列</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#自定义指令"><span class="nav-number">14.</span> <span class="nav-text">自定义指令</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#钩子函数"><span class="nav-number">15.</span> <span class="nav-text">钩子函数</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#指令实例属性"><span class="nav-number">15.1.</span> <span class="nav-text">指令实例属性</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#对象字面量"><span class="nav-number">15.2.</span> <span class="nav-text">对象字面量</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#字面修饰符"><span class="nav-number">15.3.</span> <span class="nav-text">字面修饰符</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#元素指令"><span class="nav-number">15.4.</span> <span class="nav-text">元素指令</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#高级选项"><span class="nav-number">16.</span> <span class="nav-text">高级选项</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#params"><span class="nav-number">16.1.</span> <span class="nav-text">params</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#deep"><span class="nav-number">16.2.</span> <span class="nav-text">deep</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#acceptStatement"><span class="nav-number">16.3.</span> <span class="nav-text">acceptStatement</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#priority"><span class="nav-number">16.4.</span> <span class="nav-text">priority</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#自定义过滤器"><span class="nav-number">17.</span> <span class="nav-text">自定义过滤器</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#基础"><span class="nav-number">17.1.</span> <span class="nav-text">基础</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#双向过滤器"><span class="nav-number">17.2.</span> <span class="nav-text">双向过滤器</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#动态参数"><span class="nav-number">17.3.</span> <span class="nav-text">动态参数</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#混合"><span class="nav-number">18.</span> <span class="nav-text">混合</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#基础-1"><span class="nav-number">18.1.</span> <span class="nav-text">基础</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#选项合并"><span class="nav-number">18.2.</span> <span class="nav-text">选项合并</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#全局混合"><span class="nav-number">18.3.</span> <span class="nav-text">全局混合</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#自定义选项合并策略"><span class="nav-number">18.4.</span> <span class="nav-text">自定义选项合并策略</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#插件"><span class="nav-number">19.</span> <span class="nav-text">插件</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#开发插件"><span class="nav-number">19.1.</span> <span class="nav-text">开发插件</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#使用插件"><span class="nav-number">19.2.</span> <span class="nav-text">使用插件</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#已有插件-amp-工具"><span class="nav-number">19.3.</span> <span class="nav-text">已有插件 & 工具</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2017</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">cui wujie</span>
 </div>
 
-    <a data-url="http://yoursite.com/2016/10/05/vue01/" data-id="cj1hlt1dd000v8cnoxntzn7bt" class="article-share-link"><i class="fa fa-share"></i>Share</a>
-<script>
-    (function ($) {
-        // Prevent duplicate binding
-        if (typeof(__SHARE_BUTTON_BINDED__) === 'undefined' || !__SHARE_BUTTON_BINDED__) {
-            __SHARE_BUTTON_BINDED__ = true;
-        } else {
-            return;
-        }
-        $('body').on('click', function() {
-            $('.article-share-box.on').removeClass('on');
-        }).on('click', '.article-share-link', function(e) {
-            e.stopPropagation();
 
-            var $this = $(this),
-                url = $this.attr('data-url'),
-                encodedUrl = encodeURIComponent(url),
-                id = 'article-share-box-' + $this.attr('data-id'),
-                offset = $this.offset(),
-                box;
+<div class="powered-by">
+  由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
+</div>
 
-            if ($('#' + id).length) {
-                box = $('#' + id);
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Muse
+  </a>
+</div>
 
-                if (box.hasClass('on')){
-                    box.removeClass('on');
-                    return;
-                }
-            } else {
-                var html = [
-                    '<div id="' + id + '" class="article-share-box">',
-                        '<input class="article-share-input" value="' + url + '">',
-                        '<div class="article-share-links">',
-                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="fa fa-twitter article-share-twitter" target="_blank" title="Twitter"></a>',
-                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="fa fa-facebook article-share-facebook" target="_blank" title="Facebook"></a>',
-                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="fa fa-pinterest article-share-pinterest" target="_blank" title="Pinterest"></a>',
-                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="fa fa-google article-share-google" target="_blank" title="Google+"></a>',
-                        '</div>',
-                    '</div>'
-                ].join('');
 
-              box = $(html);
+        
 
-              $('body').append(box);
-            }
+        
+      </div>
+    </footer>
 
-            $('.article-share-box.on').hide();
-
-            box.css({
-                top: offset.top + 25,
-                left: offset.left
-            }).addClass('on');
-
-        }).on('click', '.article-share-box', function (e) {
-            e.stopPropagation();
-        }).on('click', '.article-share-box-input', function () {
-            $(this).select();
-        }).on('click', '.article-share-box-link', function (e) {
-            e.preventDefault();
-            e.stopPropagation();
-
-            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
-        });
-    })(jQuery);
-</script>
-
-            
-    
-        <a href="http://yoursite.com/2016/10/05/vue01/#comments" class="article-comment-link disqus-comment-count" data-disqus-url="http://yoursite.com/2016/10/05/vue01/">Comments</a>
-    
-
-        </footer>
+    <div class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
     </div>
-    
-        
-<nav id="article-nav">
-    
-        <a href="/2017/03/31/Flexbox/" id="article-nav-newer" class="article-nav-link-wrap">
-            <strong class="article-nav-caption">Newer</strong>
-            <div class="article-nav-title">
-                
-                    Flexbox
-                
-            </div>
-        </a>
-    
-    
-        <a href="/2016/08/28/MongoDB02/" id="article-nav-older" class="article-nav-link-wrap">
-            <strong class="article-nav-caption">Older</strong>
-            <div class="article-nav-title">MongoDB02</div>
-        </a>
-    
-</nav>
+  </div>
 
+  
 
-    
-</article>
-
-
-    
-    <section id="comments">
-    
-        
-    <div id="disqus_thread">
-        <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-    </div>
-
-    
-    </section>
-
-</section>
-            
-                <aside id="sidebar">
-   
-        
-    <div class="widget-wrap">
-        <h3 class="widget-title">recent</h3>
-        <div class="widget">
-            <ul id="recent-post" class="">
-                
-                    <li>
-                        
-                        <div class="item-thumbnail">
-                            <a href="/2017/04/14/THe-font-Size/" class="thumbnail">
-    
-    
-        <span class="thumbnail-image thumbnail-none"></span>
-    
-</a>
-
-                        </div>
-                        
-                        <div class="item-inner">
-                            <p class="item-category"></p>
-                            <p class="item-title"><a href="/2017/04/14/THe-font-Size/" class="title">THe_font-Size</a></p>
-                            <p class="item-date"><time datetime="2017-04-14T08:58:23.000Z" itemprop="datePublished">2017-04-14</time></p>
-                        </div>
-                    </li>
-                
-                    <li>
-                        
-                        <div class="item-thumbnail">
-                            <a href="/2017/03/31/Flexbox/" class="thumbnail">
-    
-    
-        <span class="thumbnail-image thumbnail-none"></span>
-    
-</a>
-
-                        </div>
-                        
-                        <div class="item-inner">
-                            <p class="item-category"></p>
-                            <p class="item-title"><a href="/2017/03/31/Flexbox/" class="title">Flexbox</a></p>
-                            <p class="item-date"><time datetime="2017-03-31T01:36:24.000Z" itemprop="datePublished">2017-03-31</time></p>
-                        </div>
-                    </li>
-                
-                    <li>
-                        
-                        <div class="item-thumbnail">
-                            <a href="/2016/10/05/vue01/" class="thumbnail">
-    
-    
-        <span class="thumbnail-image thumbnail-none"></span>
-    
-</a>
-
-                        </div>
-                        
-                        <div class="item-inner">
-                            <p class="item-category"></p>
-                            <p class="item-title"><a href="/2016/10/05/vue01/" class="title">vue01</a></p>
-                            <p class="item-date"><time datetime="2016-10-05T12:07:40.000Z" itemprop="datePublished">2016-10-05</time></p>
-                        </div>
-                    </li>
-                
-                    <li>
-                        
-                        <div class="item-thumbnail">
-                            <a href="/2016/08/28/MongoDB02/" class="thumbnail">
-    
-    
-        <span class="thumbnail-image thumbnail-none"></span>
-    
-</a>
-
-                        </div>
-                        
-                        <div class="item-inner">
-                            <p class="item-category"></p>
-                            <p class="item-title"><a href="/2016/08/28/MongoDB02/" class="title">MongoDB02</a></p>
-                            <p class="item-date"><time datetime="2016-08-28T05:19:59.000Z" itemprop="datePublished">2016-08-28</time></p>
-                        </div>
-                    </li>
-                
-                    <li>
-                        
-                        <div class="item-thumbnail">
-                            <a href="/2016/08/25/MongoDB01/" class="thumbnail">
-    
-    
-        <span class="thumbnail-image thumbnail-none"></span>
-    
-</a>
-
-                        </div>
-                        
-                        <div class="item-inner">
-                            <p class="item-category"></p>
-                            <p class="item-title"><a href="/2016/08/25/MongoDB01/" class="title">MongoDB01</a></p>
-                            <p class="item-date"><time datetime="2016-08-25T05:18:57.000Z" itemprop="datePublished">2016-08-25</time></p>
-                        </div>
-                    </li>
-                
-            </ul>
-        </div>
-    </div>
-
-    
-        
-    
-        
-    <div class="widget-wrap">
-        <h3 class="widget-title">archives</h3>
-        <div class="widget">
-            <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/04/">April 2017</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/03/">March 2017</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/10/">October 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/08/">August 2016</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/07/">July 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/06/">June 2016</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/05/">May 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/04/">April 2016</a><span class="archive-list-count">10</span></li></ul>
-        </div>
-    </div>
-
-    
-        
-    <div class="widget-wrap">
-        <h3 class="widget-title">tags</h3>
-        <div class="widget">
-            <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Ajax/">Ajax</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/DB/">DB</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Flexbox/">Flexbox</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Functionss/">Functionss</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/JavaScript/">JavaScript</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Javascript/">Javascript</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/font-Size/">font-Size</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/javascript/">javascript</a><span class="tag-list-count">5</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/jsBOM/">jsBOM</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/js对象/">js对象</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/node/">node</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/phoneWeb/">phoneWeb</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/vue/">vue</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/webpack/">webpack</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/移动前端/">移动前端</a><span class="tag-list-count">1</span></li></ul>
-        </div>
-    </div>
-
-    
-        
-    <div class="widget-wrap">
-        <h3 class="widget-title">tag cloud</h3>
-        <div class="widget tagcloud">
-            <a href="/tags/Ajax/" style="font-size: 10px;">Ajax</a> <a href="/tags/DB/" style="font-size: 13.33px;">DB</a> <a href="/tags/Flexbox/" style="font-size: 10px;">Flexbox</a> <a href="/tags/Functionss/" style="font-size: 10px;">Functionss</a> <a href="/tags/JavaScript/" style="font-size: 10px;">JavaScript</a> <a href="/tags/Javascript/" style="font-size: 10px;">Javascript</a> <a href="/tags/font-Size/" style="font-size: 10px;">font-Size</a> <a href="/tags/javascript/" style="font-size: 20px;">javascript</a> <a href="/tags/jsBOM/" style="font-size: 10px;">jsBOM</a> <a href="/tags/js对象/" style="font-size: 10px;">js对象</a> <a href="/tags/node/" style="font-size: 16.67px;">node</a> <a href="/tags/phoneWeb/" style="font-size: 10px;">phoneWeb</a> <a href="/tags/vue/" style="font-size: 10px;">vue</a> <a href="/tags/webpack/" style="font-size: 10px;">webpack</a> <a href="/tags/移动前端/" style="font-size: 10px;">移动前端</a>
-        </div>
-    </div>
-
-    
-        
-    <div class="widget-wrap widget-list">
-        <h3 class="widget-title">links</h3>
-        <div class="widget">
-            <ul>
-                
-                    <li>
-                        <a href="http://hexo.io">Hexo</a>
-                    </li>
-                
-            </ul>
-        </div>
-    </div>
-
-
-    
-    <div id="toTop" class="fa fa-angle-up"></div>
-</aside>
-            
-        </div>
-        <footer id="footer">
-    <div class="outer">
-        <div id="footer-info" class="inner">
-            &copy; 2017 cui wujie<br>
-            Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>. Theme by <a href="http://github.com/ppoffice">PPOffice</a>
-        </div>
-    </div>
-</footer>
-        
-    
-    <script>
-    var disqus_config = function () {
-        
-            this.page.url = 'http://yoursite.com/2016/10/05/vue01/';
-        
-        this.page.identifier = 'vue01';
-    };
-    (function() { 
-        var d = document, s = d.createElement('script');  
-        s.src = '//' + 'hexo-theme-icarus' + '.disqus.com/embed.js';
-        s.setAttribute('data-timestamp', +new Date());
-        (d.head || d.body).appendChild(s);
-    })();
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
 </script>
 
 
 
-    
-        <script src="/libs/lightgallery/js/lightgallery.min.js"></script>
-        <script src="/libs/lightgallery/js/lg-thumbnail.min.js"></script>
-        <script src="/libs/lightgallery/js/lg-pager.min.js"></script>
-        <script src="/libs/lightgallery/js/lg-autoplay.min.js"></script>
-        <script src="/libs/lightgallery/js/lg-fullscreen.min.js"></script>
-        <script src="/libs/lightgallery/js/lg-zoom.min.js"></script>
-        <script src="/libs/lightgallery/js/lg-hash.min.js"></script>
-        <script src="/libs/lightgallery/js/lg-share.min.js"></script>
-        <script src="/libs/lightgallery/js/lg-video.min.js"></script>
-    
-    
-        <script src="/libs/justified-gallery/jquery.justifiedGallery.min.js"></script>
-    
 
 
 
-<!-- Custom Scripts -->
-<script src="/js/main.js"></script>
 
-    </div>
+
+
+  
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.0"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.0"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.0"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.0"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.0"></script>
+
+
+
+  
+
+
+
+  
+
+
+
+
+	
+
+
+
+
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+
 </body>
 </html>
