@@ -68,7 +68,7 @@
 <link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="移动前端," />
+  <meta name="keywords" content="webpack," />
 
 
 
@@ -84,22 +84,59 @@
 
 
 
-<meta name="description" content="view详解viewport简介
-
-viewport特性，一个移动专属的Meta的值，用于定义视口的各种行为。">
+<meta name="description" content="webstorm+webpack创建项目1.使用webstrom创建一个空的项目
+2.在项目下创建文件夹和文件
+文件内容
+index.css
+p{
+    font-size: 24px;
+    padding:0 100px;
+    color:blue;
+}
+p:nth-of-type(2) {
+    font-size: 30px;
+    text-align: center;">
 <meta property="og:type" content="article">
-<meta property="og:title" content="移动前端知识点.md">
-<meta property="og:url" content="http://yoursite.com/2016/04/24/移动前端知识点一/index.html">
+<meta property="og:title" content="webstorm+webpack创建项目">
+<meta property="og:url" content="http://yoursite.com/2017/05/10/webstorm+webpack创建项目/index.html">
 <meta property="og:site_name" content="MrCui's Blog">
-<meta property="og:description" content="view详解viewport简介
-
-viewport特性，一个移动专属的Meta的值，用于定义视口的各种行为。">
-<meta property="og:updated_time" content="2016-04-24T15:25:40.036Z">
+<meta property="og:description" content="webstorm+webpack创建项目1.使用webstrom创建一个空的项目
+2.在项目下创建文件夹和文件
+文件内容
+index.css
+p{
+    font-size: 24px;
+    padding:0 100px;
+    color:blue;
+}
+p:nth-of-type(2) {
+    font-size: 30px;
+    text-align: center;">
+<meta property="og:image" content="http://oqn5dv8l2.bkt.clouddn.com/1-1.png">
+<meta property="og:image" content="http://oqn5dv8l2.bkt.clouddn.com/1-2.png">
+<meta property="og:image" content="http://oqn5dv8l2.bkt.clouddn.com/1-3.png">
+<meta property="og:image" content="http://oqn5dv8l2.bkt.clouddn.com/1-4.png">
+<meta property="og:image" content="http://oqn5dv8l2.bkt.clouddn.com/1-5.png">
+<meta property="og:image" content="http://oqn5dv8l2.bkt.clouddn.com/1-6.png">
+<meta property="og:image" content="http://oqn5dv8l2.bkt.clouddn.com/1-7.png">
+<meta property="og:image" content="http://oqn5dv8l2.bkt.clouddn.com/1-8.png">
+<meta property="og:image" content="http://oqn5dv8l2.bkt.clouddn.com/1-10.png">
+<meta property="og:updated_time" content="2017-06-10T11:50:28.304Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="移动前端知识点.md">
-<meta name="twitter:description" content="view详解viewport简介
-
-viewport特性，一个移动专属的Meta的值，用于定义视口的各种行为。">
+<meta name="twitter:title" content="webstorm+webpack创建项目">
+<meta name="twitter:description" content="webstorm+webpack创建项目1.使用webstrom创建一个空的项目
+2.在项目下创建文件夹和文件
+文件内容
+index.css
+p{
+    font-size: 24px;
+    padding:0 100px;
+    color:blue;
+}
+p:nth-of-type(2) {
+    font-size: 30px;
+    text-align: center;">
+<meta name="twitter:image" content="http://oqn5dv8l2.bkt.clouddn.com/1-1.png">
 
 
 
@@ -127,13 +164,13 @@ viewport特性，一个移动专属的Meta的值，用于定义视口的各种�
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2016/04/24/移动前端知识点一/"/>
+  <link rel="canonical" href="http://yoursite.com/2017/05/10/webstorm+webpack创建项目/"/>
 
 
 
 
 
-  <title> 移动前端知识点.md | MrCui's Blog </title>
+  <title> webstorm+webpack创建项目 | MrCui's Blog </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -254,7 +291,7 @@ viewport特性，一个移动专属的Meta的值，用于定义视口的各种�
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-  <link itemprop="mainEntityOfPage" href="http://yoursite.com/2016/04/24/移动前端知识点一/">
+  <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/05/10/webstorm+webpack创建项目/">
 
   <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
     <meta itemprop="name" content="cui wujie">
@@ -278,7 +315,7 @@ viewport特性，一个移动专属的Meta的值，用于定义视口的各种�
             
             
               
-                移动前端知识点.md
+                webstorm+webpack创建项目
               
             
           </h1>
@@ -291,8 +328,8 @@ viewport特性，一个移动专属的Meta的值，用于定义视口的各种�
                 <i class="fa fa-calendar-o"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2016-04-24T22:41:39+08:00">
-                2016-04-24
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-05-10T19:42:13+08:00">
+                2017-05-10
               </time>
             
 
@@ -327,57 +364,122 @@ viewport特性，一个移动专属的Meta的值，用于定义视口的各种�
       
 
       
-        <h1 id="view详解"><a href="#view详解" class="headerlink" title="view详解"></a>view详解</h1><p>viewport简介</p>
-<ul>
-<li>viewport特性，一个移动专属的Meta的值，用于定义视口的各种行为。<br></li>
-</ul>
-<a id="more"></a>
-<h1 id="layout-viewport"><a href="#layout-viewport" class="headerlink" title="layout viewport"></a>layout viewport</h1><p>Apple也发现了这个问题，并且适时的出现，它提出了一个方案用来解决这个问题。在iOS Safari中定义了一个viewport meta标签，用来创建一个虚拟的布局视口（layout viewport），而这个视口的分辨率接近于PC显示器，Apple将其定义为980px。</p>
-<p>这就很好的解决了早期的页面在手机上显示的问题，由于两者之间的宽度趋近，CSS只需要像在PC上那样渲染页面就行，原有的页面结构不会被破坏。</p>
-<h1 id="visual-viewport"><a href="#visual-viewport" class="headerlink" title="visual viewport"></a>visual viewport</h1><p>有了layout viewport，我们还需要一个视口用来承载它，这个视口可以简单的认为是手持设备物理屏幕的可视区域，我们称之为（视觉视口）visual viewport。这是一个比较直观的概念，因为你能看得见你的手机屏幕。</p>
-<p>对于visual viewport，开发者一般只需要知道它的存在和概念就行，因为无法对它进行任何设置或者修改。很明显，visual viewport的尺寸不会是一个固定的值，甚至每款设备都可能不同。大致列几种常见设备的visual viewport尺寸：</p>
-<ul>
-<li>iPhone4~iPhone5S: 320*480px</li>
-<li>iPhone6~iPhone6S: 375*627px</li>
-<li>iPhone6 Plus~iPhone6S Plus: 414*736px</li>
-</ul>
-<p>以iPhone4S为例，会在其320px的visual viewport上，创建一个宽980px的layout viewport，于是用户可以在visual viewport中拖动或者缩放网页，来获得良好的浏览效果；布局视口用来配合CSS渲染布局，当我们定义一个容器的宽度为100%时，这个容器的实际宽度是980px而不是320px，通过这种方式大部分网页就能以缩放的形式正常显示在手机屏幕上了。</p>
-<h1 id="ideal-viewport"><a href="#ideal-viewport" class="headerlink" title="ideal viewport"></a>ideal viewport</h1><p>我们还需要一个视口，它类似于布局视口，但宽度和视觉视口相同，这就是完美视口（ideal viewport）。</p>
-<p>有了完美视口，用户不用缩放和拖动网页就能够很好的进行网页浏览。而完美视口也是通过viewport meta的某种设置来达到。</p>
-<p>说了这么一大堆的东西，貌似都和viewport有关联，那么viewport到底怎么搞，请继续往下。</p>
-<h1 id="viewport特性"><a href="#viewport特性" class="headerlink" title="viewport特性"></a>viewport特性</h1><ul>
-<li>通常情况下，viewport有以下6种设置，但是也不排除厂商可能会增加一些特定的设置</li>
-</ul>
-<pre><code>Name                       Value                    Description
-width            正整数或device-width             定义为视口的宽度，单位为像素
-height            正整数或device-height         定义为视口的高度，单位为像素    
-initial-scale    [0.0-10.0]                        定义初始缩放值
-minimum-scale    [0.0-10.0]                    定义缩小最小比例，它必须小于或等于maximum-scale的设置
-maximum-scale    [0.0-10.0]                    定义放大最大比例，它必须大于或等于minimum-scale的设置
-user-scalable    yes/no                        定义是否允许用户手动缩放页面，默认为yes
-</code></pre><h2 id="width"><a href="#width" class="headerlink" title="width"></a>width</h2><p>width被用来定义layout viewport的宽度，如果不指定该属性（或者移除viewport meta标签），则layout viewport宽度为厂商默认值。如：iPhone为980px；</p>
-<p>举个例子：</p>
-<pre><code>&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width&quot; /&gt;
-</code></pre><p>此时的layout viewport将成为ideal viewport，因为layout viewport宽度与设备视觉视口宽度一致了。</p>
-<p>除了width之外，还有一个属性定义也能实现ideal viewport，那就是initial-scale。</p>
-<h2 id="height"><a href="#height" class="headerlink" title="height"></a>height</h2><p>与width类似，但实际上却不常用，因为没有太多的use case。</p>
-<h2 id="initial-scale"><a href="#initial-scale" class="headerlink" title="initial-scale"></a>initial-scale</h2><p>如果想页面默认以某个比例放大或者缩小然后呈现给用户，那么可以通过定义initial-scale来完成。</p>
-<p>initial-scale用于指定页面的初始缩放比例，假定你这样定义：</p>
-<pre><code>&lt;meta name=&quot;viewport&quot; content=&quot;initial-scale=2&quot; /&gt;
-</code></pre><p>那么用户将会看到2倍大小的页面内容。</p>
-<p>在说width的时候，我们说到initial-scale也能实现ideal viewport，是的，你只需要这样做，也可以得到完美视口：</p>
-<pre><code>&lt;meta name=&quot;viewport&quot; content=&quot;initial-scale=1&quot; /&gt;
-</code></pre><h2 id="maximum-scale"><a href="#maximum-scale" class="headerlink" title="maximum-scale"></a>maximum-scale</h2><p>在移动端，你可能会考虑用户浏览不便，然后给予用户放大页面的权利，但同时又希望是在一定范围内的放大，这时就可以使用maximum-scale来进行约束。</p>
-<p>maximum-scale用于指定用户能够放大的比例。</p>
-<pre><code>&lt;meta name=&quot;viewport&quot; content=&quot;initial-scale=1,maximum-scale=5&quot; /&gt;
-</code></pre><p>假设页面的默认缩放值initial-scale是1，那么用户最终能够将页面放大到这个初始页面大小的5倍。</p>
-<h2 id="minimum-scale"><a href="#minimum-scale" class="headerlink" title="minimum-scale"></a>minimum-scale</h2><p>类似maximum-scale的描述，不过minimum-scale是用来指定页面缩小比例的。</p>
-<p>通常情况下，为了有更好地体验，不会定义该属性的值比1更小，因为那样页面将变得难以阅读。</p>
-<h2 id="user-scalable"><a href="#user-scalable" class="headerlink" title="user-scalable"></a>user-scalable</h2><p>如果你不想页面被放大或者缩小，通过定义user-scalable来约束用户是否可以通过手势对页面进行缩放即可。</p>
-<p>该属性的默认值为yes，即可被缩放（如果使用默认值，该属性可以不定义）；当然，如果你的应用不打算让用户拥有缩放权限，可以将该值设置为no。</p>
-<p>使用方法如下：</p>
-<pre><code>&lt;meta name=&quot;viewport&quot; content=&quot;user-scalable=no&quot; /&gt;
-</code></pre><h1 id="结语"><a href="#结语" class="headerlink" title="结语"></a>结语</h1><p>当你掌握了viewport，那么意味着你已经大致了解了移动平台与PC平台的不同，你可以更专注而细致的去解决某些平台差异问题。</p>
+        <h1 id="webstorm-webpack创建项目"><a href="#webstorm-webpack创建项目" class="headerlink" title="webstorm+webpack创建项目"></a>webstorm+webpack创建项目</h1><h2 id="1-使用webstrom创建一个空的项目"><a href="#1-使用webstrom创建一个空的项目" class="headerlink" title="1.使用webstrom创建一个空的项目"></a>1.使用webstrom创建一个空的项目</h2><p><img src="http://oqn5dv8l2.bkt.clouddn.com/1-1.png" alt=""></p>
+<h2 id="2-在项目下创建文件夹和文件"><a href="#2-在项目下创建文件夹和文件" class="headerlink" title="2.在项目下创建文件夹和文件"></a>2.在项目下创建文件夹和文件</h2><p><img src="http://oqn5dv8l2.bkt.clouddn.com/1-2.png" alt=""></p>
+<h3 id="文件内容"><a href="#文件内容" class="headerlink" title="文件内容"></a>文件内容</h3><ol>
+<li><p>index.css</p>
+<pre><code>p{
+    font-size: 24px;
+    padding:0 100px;
+    color:blue;
+}
+p:nth-of-type(2) {
+    font-size: 30px;
+    text-align: center;
+    color:black;
+    font-family:&quot;幼圆&quot;;
+}
+p:nth-of-type(3) {
+    color: red;
+    font-weight:bold;
+    text-align: right;
+}
+</code></pre></li>
+<li><p>index.json</p>
+<pre><code>{
+  &quot;name&quot;:&quot;hello webpack&quot;,
+  &quot;content&quot;:&quot;this is my first demo&quot;,
+  &quot;start&quot;:&quot;Ready Go!&quot;
+}
+</code></pre></li>
+<li>createdom.js</li>
+</ol>
+<pre><code>var message=require(&apos;./../data/index.json&apos;);
+module.exports = function() {
+    var greet=document.createElement(&apos;div&apos;);
+    greet.innerHTML=&quot;&lt;p&gt;&quot;+message.name+&quot;&lt;/p&gt;&quot;+&quot;&lt;p&gt;&quot;+message.content+&quot;&lt;/p&gt;&quot;+&quot;&lt;p&gt;&quot;+message.start+&quot;&lt;/p&gt;&quot;;
+    return greet;
+};
+</code></pre><ol>
+<li><p>entry.js</p>
+<pre><code>require(&apos;./../css/index.css&apos;);
+var createdom = require(&apos;./createdom.js&apos;);
+document.getElementById(&apos;app&apos;).appendChild(createdom());
+</code></pre></li>
+</ol>
+<h2 id="3-命令操作"><a href="#3-命令操作" class="headerlink" title="3.命令操作"></a>3.命令操作</h2><p>在webstorm的Terminal窗口执行如下命令：<br><img src="http://oqn5dv8l2.bkt.clouddn.com/1-3.png" alt=""></p>
+<h3 id="命令行"><a href="#命令行" class="headerlink" title="命令行"></a>命令行</h3><p>a). 生成依赖文件package.json<br>    //生成package.json</p>
+<pre><code>1. npm  init -y
+</code></pre><p><img src="http://oqn5dv8l2.bkt.clouddn.com/1-4.png" alt=""></p>
+<p>b). 依次安装相关依赖</p>
+<ol>
+<li><p>npm intsall webpack</p>
+</li>
+<li><p>npm install –save-dev webpack</p>
+</li>
+<li><p>npm install –save-dev css-loader</p>
+</li>
+<li><p>npm install –save-dev style-loader</p>
+</li>
+<li><p>npm install –save-dev json-loader</p>
+</li>
+<li><p>npm install –save-dev babel-core</p>
+</li>
+<li><p>npm install –save-dev babel-loader</p>
+</li>
+<li><p>npm install –save-dev webpack-dev-server</p>
+</li>
+</ol>
+<h2 id="4-配置webpack-config-js文件"><a href="#4-配置webpack-config-js文件" class="headerlink" title="4.配置webpack.config.js文件"></a>4.配置webpack.config.js文件</h2><p>在项目根路径下创建webpack.config.js文件，文件内容为：</p>
+<pre><code>var webpack = require(&apos;webpack&apos;);
+module.exports = {
+    //2、进出口文件配置
+    entry:&apos;./jsproject/entry.js&apos;,//指定的入口文件,“__dirname”是node.js中的一个全局变量，它指向当前执行脚本所在的目录
+    output: {//输出
+        path: __dirname+&apos;/index&apos;,//输出路径
+        filename: &apos;bundle.js&apos;//输出文件名
+    },
+    module: {//在配置文件里添加加载器说明，指明每种文件需要什么加载器处理
+        loaders: [
+            {//json加载器
+                test: /\.json$/,
+                loader: &quot;json-loader&quot;//注意-loader不能省略，网上说能省略，经测试编译会报错
+            },
+            {//5、编译es6配置
+                test:/\.js$/,
+                exclude:/node_modules/,
+                loader:&apos;babel-loader&apos;
+            },
+            {//3、CSS-loader
+                test:/\.css$/,
+                loader:&apos;style-loader!css-loader&apos;//添加对样式表的处理
+            }
+
+        ]
+    },
+    //4、服务器依赖包配置
+    devServer: {//注意：网上很多都有colors属性，但是实际上的webpack2.x已经不支持该属性了
+        contentBase: &quot;./index&quot;,//本地服务器所加载的页面所在的目录
+        historyApiFallback: true,//不跳转
+        inline: true//实时刷新
+        //hot：true,//不要书写该属性，否则浏览器无法自动更新
+        //publicPath：&quot;/asses/&quot;,//设置该属性后，webpack-dev-server会相对于该路径
+    },
+    plugins:[]//插件
+}
+</code></pre><p>此时的文件目录为：<br><img src="http://oqn5dv8l2.bkt.clouddn.com/1-5.png" alt=""></p>
+<h2 id="5-启动服务"><a href="#5-启动服务" class="headerlink" title="5.启动服务"></a>5.启动服务</h2><p>在Terminal中输入：</p>
+<pre><code>webpack
+</code></pre><p>运行正确示意图：</p>
+<p><img src="http://oqn5dv8l2.bkt.clouddn.com/1-6.png" alt=""></p>
+<p>执行完成后，输入：</p>
+<pre><code>webpack-dev-server
+</code></pre><p>可能会出现’webpack-dev-server’ 不是内部或外部命令，也不是可运行的程序或批处理文件。这是需要在package.json文件中配置一下。</p>
+<p><img src="http://oqn5dv8l2.bkt.clouddn.com/1-7.png" alt=""></p>
+<p>运行</p>
+<pre><code>npm run server
+</code></pre><p>运行成功如下图<br><img src="http://oqn5dv8l2.bkt.clouddn.com/1-8.png" alt=""></p>
+<h2 id="6-然后在浏览器中输入：http-localhost-8080"><a href="#6-然后在浏览器中输入：http-localhost-8080" class="headerlink" title="6.然后在浏览器中输入：http://localhost:8080/"></a>6.然后在浏览器中输入：<a href="http://localhost:8080/" target="_blank" rel="external">http://localhost:8080/</a></h2><p><img src="http://oqn5dv8l2.bkt.clouddn.com/1-10.png" alt=""></p>
 
       
     </div>
@@ -401,7 +503,7 @@ user-scalable    yes/no                        定义是否允许用户手动缩
       
         <div class="post-tags">
           
-            <a href="/tags/移动前端/" rel="tag"># 移动前端</a>
+            <a href="/tags/webpack/" rel="tag"># webpack</a>
           
         </div>
       
@@ -410,8 +512,8 @@ user-scalable    yes/no                        定义是否允许用户手动缩
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2016/04/19/JsCommenFunctions/" rel="next" title="JsCommenFunctions">
-                <i class="fa fa-chevron-left"></i> JsCommenFunctions
+              <a href="/2017/05/05/git命令2/" rel="next" title="git命令2">
+                <i class="fa fa-chevron-left"></i> git命令2
               </a>
             
           </div>
@@ -420,8 +522,8 @@ user-scalable    yes/no                        定义是否允许用户手动缩
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2016/05/14/javascript-Ajax/" rel="prev" title="javascript_Ajax">
-                javascript_Ajax <i class="fa fa-chevron-right"></i>
+              <a href="/2017/05/10/重拾webpack02/" rel="prev" title="重拾webpack02">
+                重拾webpack02 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -582,7 +684,7 @@ user-scalable    yes/no                        定义是否允许用户手动缩
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#view详解"><span class="nav-number">1.</span> <span class="nav-text">view详解</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#layout-viewport"><span class="nav-number">2.</span> <span class="nav-text">layout viewport</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#visual-viewport"><span class="nav-number">3.</span> <span class="nav-text">visual viewport</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#ideal-viewport"><span class="nav-number">4.</span> <span class="nav-text">ideal viewport</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#viewport特性"><span class="nav-number">5.</span> <span class="nav-text">viewport特性</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#width"><span class="nav-number">5.1.</span> <span class="nav-text">width</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#height"><span class="nav-number">5.2.</span> <span class="nav-text">height</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#initial-scale"><span class="nav-number">5.3.</span> <span class="nav-text">initial-scale</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#maximum-scale"><span class="nav-number">5.4.</span> <span class="nav-text">maximum-scale</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#minimum-scale"><span class="nav-number">5.5.</span> <span class="nav-text">minimum-scale</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#user-scalable"><span class="nav-number">5.6.</span> <span class="nav-text">user-scalable</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#结语"><span class="nav-number">6.</span> <span class="nav-text">结语</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#webstorm-webpack创建项目"><span class="nav-number">1.</span> <span class="nav-text">webstorm+webpack创建项目</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-使用webstrom创建一个空的项目"><span class="nav-number">1.1.</span> <span class="nav-text">1.使用webstrom创建一个空的项目</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-在项目下创建文件夹和文件"><span class="nav-number">1.2.</span> <span class="nav-text">2.在项目下创建文件夹和文件</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#文件内容"><span class="nav-number">1.2.1.</span> <span class="nav-text">文件内容</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-命令操作"><span class="nav-number">1.3.</span> <span class="nav-text">3.命令操作</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#命令行"><span class="nav-number">1.3.1.</span> <span class="nav-text">命令行</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-配置webpack-config-js文件"><span class="nav-number">1.4.</span> <span class="nav-text">4.配置webpack.config.js文件</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5-启动服务"><span class="nav-number">1.5.</span> <span class="nav-text">5.启动服务</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#6-然后在浏览器中输入：http-localhost-8080"><span class="nav-number">1.6.</span> <span class="nav-text">6.然后在浏览器中输入：http://localhost:8080/</span></a></li></ol></li></ol></div>
             
 
           </div>
